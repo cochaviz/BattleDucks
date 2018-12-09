@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BattleDucks</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+
+<body>
+    <!--<header>-->
+        <!--<img id="header-img" src="images/titlegame.png"/>-->
+    <!--</header>-->
+
+
+    <main>
+        <div id="left">
+            <div id="duckies" class="duckies_gamestate1">
+                <h1 class="title">Duckies</h1>
+
+                <div id="duckies_container">
+                    <div id="ducky0" class="ship">
+                        <div class="ship_cell"></div>
+                        <div class="ship_cell"></div>
+                    </div>
+                    
+                    <div id="ducky1" class="ship">
+                        <div class="ship_cell"></div>
+                        <div class="ship_cell"></div>
+                    </div>
+
+                    <div id="ducky2" class="ship">
+                        <div class="ship_cell"></div>
+                        <div class="ship_cell"></div>
+                    </div>
+
+                    <div id="ducky3" class="ship">
+                        <div class="ship_cell"></div>
+                        <div class="ship_cell"></div>
+                        <div class="ship_cell"></div>
+                    </div>
+                    
+                    <div id="ducky4" class="ship">
+                        <div class="ship_cell"></div>
+                        <div class="ship_cell"></div>
+                        <div class="ship_cell"></div>
+                    </div>
+
+                    <div id="ducky5" class="ship">
+                        <div class="ship_cell"></div>
+                        <div class="ship_cell"></div>
+                        <div class="ship_cell"></div>
+                        <div class="ship_cell"></div>
+                        <div class="ship_cell"></div>
+                        <div class="ship_cell"></div>
+                    </div>
+
+                    <div id="ducky6" class="ship">
+                        <div class="ship_cell"></div>
+                        <div class="ship_cell"></div>
+                        <div class="ship_cell"></div>
+                    </div>
+
+                    <div id="ducky7" class="ship">
+                        <div class="ship_cell"></div>
+                        <div class="ship_cell"></div>
+                        <div class="ship_cell"></div>
+                        <div class="ship_cell"></div>
+                    </div>
+
+                    <div id="ducky8" class="ship" >
+                        <div class="ship_cell"></div>
+                        <div class="ship_cell"></div>
+                        <div class="ship_cell"></div>
+                        <div class="ship_cell"></div>
+                    </div>
+                </div>
+
+                <div id="ready">
+                    <a id="player_ready">Ready</a>
+                </div>
+                <input type="checkbox" id="forceReady" placeholder="forceReady?">
+            </div>
+
+            <div id="opponent_board" class="board">
+                <h1 class="title">Opponent</h1>
+            </div>
+        </div>
+
+        <div id="player_board" class="board">
+            <h1 class="title">You</h1>
+            <div id="placeholder"></div>
+        </div>
+
+        
+        <div id="results"></div>
+    </main>
+
+    <section id="endgame_overlay">
+        <button id="new_game">New Game</button>
+        <button id="main_menu">Main Menu</button>
+    </section>
+</body>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="javascripts/game.js"></script>
+    
+</html>

@@ -1,0 +1,289 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font: 14px Helvetica, sans-serif;
+}
+
+main {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 20px;
+}
+
+header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    width: 100%;
+}
+
+@keyframes remove{
+    from {visibility: visible}
+    to {visibility: hidden;}
+}
+
+
+#header-img {
+    border: 3px solid black;
+}
+
+#left {
+    float: left;
+}
+
+#duckies_border {
+    width: 500px;
+    height: 500px;
+
+    outline: 1px solid black;
+}
+
+#duckies_container {
+    display: grid;
+    width: 400px;
+    height: 480px;
+
+    margin: 20px auto auto;
+
+    grid-template-columns: repeat(5, 50px);
+
+    grid-row-gap: 20px;
+    grid-column-gap: 30px;
+}
+
+#placeholder {
+    position:absolute;
+    bottom:150px;
+    right:300px;
+
+    font-family: "DejaV.u Sans Condensed";
+    font-size: 20px;
+    font-weight: bold;
+
+    color: red;
+
+    animation-name: remove;
+    animation-delay: 5s;
+}
+
+#ready {
+    background-color:#3464db;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+    border:1px solid #152ab0;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:16px;
+    font-weight:bold;
+    padding:15px 39px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+
+    margin-top: 40px;
+    margin-left: 40px;
+}
+#ready:hover {
+    background-color:#254980;
+}
+#ready:active {
+    position:relative;
+    top:1px;
+}
+
+
+#player_board {
+    float: right;
+    margin-left: 50px;
+}
+
+#opponent_board {
+    visibility: hidden;
+    display: none;
+}
+
+#endgame_overlay {
+    visibility: hidden;
+    display: none;
+}
+
+.title {
+    text-align: center;
+}
+
+.tile_snappable {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.tile_0 {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.tile_1 {
+    display: block;
+    width: 50px;
+    height: 50px;
+
+    image-rendering:  -moz-crisp-edges;
+    background: url("../images/explosion.png");
+    background-size: 50px 50px;
+}
+
+.tile_2 {
+    display: block;
+    width: 50px;
+    height: 50px;
+
+    image-rendering:  -moz-crisp-edges;
+    background: url("../images/ducky.png") no-repeat center;
+    background-size: 45px 45px;
+}
+
+.tile_3 {
+    display: block;
+    width: 50px;
+    height: 50px;
+
+    image-rendering:  -moz-crisp-edges;
+    background: url("../images/f.png");
+    background-size: 50px 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(10, 50px);
+
+    image-rendering:  -moz-crisp-edges;
+    background: url("../images/water.png") top left;
+    background-size: 50px 50px;
+
+    border: 1px solid black;
+}
+
+.board {
+    width: 500px;
+    margin: auto;
+}
+
+.ship_cell{
+    display: block; 
+    width: 50px;
+    height: 50px;
+
+    image-rendering:  -moz-crisp-edges;
+
+    background: url("../images/ducky.png") no-repeat center;
+    background-size: 45px 45px;
+
+    box-shadow: 0px 5px 3px 0px rgba(0,0,0,0.75);
+}
+
+.ship{
+    width: 50px;
+    display: grid;
+
+    grid-template-columns: repeat(1, 50px);
+}
+
+#ducky0 {
+    width: 50px;
+    height: 100px;
+    display: grid;
+
+    grid-template-columns: repeat(1, 50px);
+    grid-template-rows: repeat(2, 50px);
+}
+
+#ducky1 {
+    width: 50px;
+    height: 100px;
+    display: grid;
+
+    grid-template-columns: repeat(1, 50px);
+    grid-template-rows: repeat(2, 50px);
+}
+
+#ducky2 {
+    width: 50px;
+    height: 100px;
+    display: grid;
+
+    grid-template-columns: repeat(1, 50px);
+    grid-template-rows: repeat(2, 50px);
+}
+
+#ducky3{
+    width: 50px;
+    height: 150px;
+    display: grid;
+
+    grid-template-columns: repeat(1, 50px);
+    grid-template-rows: repeat(3, 50px);
+}
+
+#ducky4{
+    width: 50px;
+    height: 150px;
+    display: grid;
+
+    grid-template-columns: repeat(1, 50px);
+    grid-template-rows: repeat(3, 50px);
+}
+
+#ducky5 {
+    width: 50px;
+    height: 300px;
+    display: grid;
+
+    grid-template-columns: repeat(1, 50px);
+    grid-template-rows: repeat(6, 50px);
+}
+
+#ducky6{
+    width: 50px;
+    height: 150px;
+    display: grid;
+
+    grid-template-columns: repeat(1, 50px);
+    grid-template-rows: repeat(3, 50px);
+}
+
+#ducky7 {
+    width: 50px;
+    height: 200px;
+    display: grid;
+
+    grid-template-columns: repeat(1, 50px);
+    grid-template-rows: repeat(4, 50px);
+}
+
+#ducky8 {
+    width: 50px;
+    height: 200px;
+    display: grid;
+
+    grid-template-columns: repeat(1, 50px);
+    grid-template-rows: repeat(4, 50px);
+}
+
+.rotate_90{
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.rotate_-90{
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
