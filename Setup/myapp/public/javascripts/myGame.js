@@ -1,4 +1,6 @@
 // ---- BEGIN FUNCTIONS ----
+var playerIsReady = false;
+var grid_size = 10;
 
 // Check equality of arrays
 function arraysEqual(a, b) {
@@ -10,30 +12,31 @@ function arraysEqual(a, b) {
         if (a[i] !== b[i]) return false;
     }
     return true;
-}
+};
 
 // Continue to the next game state
-function readyState(grid_size) {
-    console.log("Entered readyState()");//-------------------
+function readyState() {
     if(validBoard() || $("#forceReady").is(":checked")) {
-        
-    console.log("if start");//-------------------
+        playerIsReady = true;
+
         let used_tiles = returnBoard();
         insertDucks(used_tiles);
-        generateGrid("opponent_board", "opponent_grid", grid_size, 0);
-    console.log("if 2");//-------------------    
-        $("#duckies").css({"visibility": "hidden", display: "none"});
-        $("#opponent_board").css({"visibility": "visible", display: "block"});
-    console.log("if 3");//-------------------        
-        $("#opponent_grid > div").click(function(){
-            $("#results").html($(this).attr("id"));
-        });
-    console.log("if start 4");//-------------------    
     } else {
         $("#placeholder").html("Hey, you forgot me!").css({"transition": "ease-out"});
-        console.log("else");//-------------------
     }
-}
+};
+
+// Show opponent board
+function showOpponent(grid_size) {
+        generateGrid("opponent_board", "opponent_grid", grid_size, 0);
+
+        $("#duckies").css({"visibility": "hidden", display: "none"});
+        $("#opponent_board").css({"visibility": "visible", display: "block"});
+
+        // $("#opponent_grid > div").click(function(){
+        //     $("#results").html($(this).attr("id"));
+        // });
+};
 
 
 // Generate a grid consisting of divs
@@ -53,7 +56,7 @@ function generateGrid(parent_id, grid_id, size, tile_status) {
             document.getElementById(grid_id).appendChild(element);
         }
     }
-}
+};
 
 // Calculate the coordinate of a ship cell within the player_grid
 function getUnitCoordinate(cell) {
@@ -69,7 +72,7 @@ function getUnitCoordinate(cell) {
     let grid_y = Math.round(position_top/tile.height.slice(0,2));
 
     return [grid_x, grid_y];
-}
+};
 
 // Return all the coordinates of the cells of a ship in a 2D array
 function getShipCoordinate(ship) {
@@ -80,7 +83,7 @@ function getShipCoordinate(ship) {
         cell_coordinates.push(getUnitCoordinate($(cells[i]), $("#player_grid")));
     }
     return cell_coordinates;
-}
+};
 
 // Check if ship postition is valid (e.g. within the boarders of the grid), and if not return to the last valid position
 function validPosition(this_ship, grid_size) {
@@ -93,7 +96,7 @@ function validPosition(this_ship, grid_size) {
         }
     }
     return true;
-}
+};
 
 // Check if ships aren't overlapping with each other
 function noOverlap() {
@@ -115,7 +118,7 @@ function noOverlap() {
         }
     }
     return true;
-}
+};
 
 // Check if all ships are in the board, and if they don't overlap
 function validBoard() {
@@ -130,7 +133,7 @@ function validBoard() {
         return true;
     }
     return false;
-}
+};
 
 // Return the coordinates of all ship tiles
 function returnBoard() {
@@ -145,7 +148,7 @@ function returnBoard() {
         }
     }
     return used_tiles;
-}
+};
 
 // Rotate children of a parent -90 dergrees
 function rotateChildren(parent) {
@@ -153,7 +156,7 @@ function rotateChildren(parent) {
     for(let i=0; i<children.length; i++) {
         $(children[i]).toggleClass("rotate_-90");
     }
-}
+};
 
 // Move all children of a class to another class
 function moveChildrenFromTo(parent1, parent2) {
@@ -162,29 +165,26 @@ function moveChildrenFromTo(parent1, parent2) {
     for(let i=0; i<children.length; i++) {
         $(children[i]).appendTo($(parent2));    
     }
-}
+};
 
 // Update a tile given a status and coordinate
-function updateTile(coordinate, status) {
-    $("#\\("+coordinate[0]+"\\,"+coordinate[1]+"\\)").attr("class", "tile_"+status);
-}
+function updateTile(coordinate, status, parent) {
+    $(parent + "> #\\("+coordinate[0]+"\\,"+coordinate[1]+"\\)").attr("class", "tile_"+status);
+};
 
 // Insert all ducks into the player board permanently
 function insertDucks(used_tiles) {
     for(let i=0; i<used_tiles.length; i++) {
-        updateTile(used_tiles[i], 2)
+        updateTile(used_tiles[i], 2, "#player_board");
     }
-}
+};
 //-------------------------------------------------------------------------------------------------------
 
 function ClientGame(){
-    
-    
     this.myBoats = null;
     this.otherplayer = null;
 
     this.generateAll = function(){
-        let grid_size = 10;
 
         let prev_left;
         let prev_top;
@@ -227,10 +227,10 @@ function ClientGame(){
         
             });
         
-            $("#player_ready").click(function(){
-                readyState(grid_size);
-                console.log("Stop clicking me!");
-            }); 
+            // $("#player_ready").click(function(){
+            //     readyState(grid_size);
+            //     console.log("Stop clicking me!");
+            // }); 
         });
     };
 
@@ -239,10 +239,11 @@ function ClientGame(){
         a = [[2,2], [3,3]];
         return a;
     };
-    this.takeAGuess = function(){
+    this.takeAGuess = function(position){
         //Zohar
         //makes a valid guess, return (lin,col)
-        let a = [3,3];
+
+        let a = position;
         return a;
     }
 
@@ -252,7 +253,11 @@ function ClientGame(){
         
     }
     this.updateOtherBoard = function(poz, hit){
-        //update gui
+        if(hit){
+            updateTile(poz, 3, "#opponent_board");//explosion
+        } else {
+            updateTile(poz, 1, "#opponent_board");//miss
+        }
     }
 
 }
@@ -266,27 +271,42 @@ function ClientGame(){
     socket.onmessage = function(event){
         alert("recieved message: " + event.data);
         let ServerMessage = JSON.parse(event.data);
-        alert("parsed message type is: " + ServerMessage.type);
         if (ServerMessage.type === "game is starting soon"){
             //var game = new ClientGame();
-            let ducks = game.createBoard();//returns array with boat poz
-            let myMsg = Messages.playerReady;
-            myMsg.data = ducks;
-            alert("**" + JSON.stringify(myMsg));
-            socket.send(JSON.stringify(myMsg));
+            //let ducks = game.createBoard();//returns array with boat poz
+            $("#player_ready").click(function(){
+                readyState(grid_size);
+                console.log("Stop clicking me!");
+                let ducks = returnBoard();
+                let myMsg = Messages.playerReady;
+                myMsg.data = ducks;
+                alert("**" + JSON.stringify(myMsg));
+                socket.send(JSON.stringify(myMsg));               
+            });
 
            // socket.send(ducks);
         }
         if (ServerMessage.type == "All ducks on deck"){//both boards are ready for battle
             //shows oponents board(ZOHAR)
+            showOpponent(grid_size);
         }
         if (ServerMessage.type == "YourTurn"){//my turn to make a guess
             //mouse listener (separate function ?) Zohar
-            let position = game.takeAGuess();//returns a poz
-            let myMsg = Messages.playerChose;
-            myMsg.data = position;
-            alert("**" + JSON.stringify(myMsg));
-            socket.send(JSON.stringify(myMsg));
+           // let position = game.takeAGuess();//returns a poz
+
+            $(document).ready(function(){
+                $("#opponent_grid > div").click(function(){
+                    let coordinate_string = $(this).attr("id");
+                    $("#results").html(coordinate_string);
+
+                    let position = [parseInt(coordinate_string.charAt(1)), parseInt(coordinate_string.charAt(3))];
+                    alert (position);
+                    let myMsg = Messages.playerChose;
+                    myMsg.data = position;
+                    alert("**" + JSON.stringify(myMsg));
+                    socket.send(JSON.stringify(myMsg));
+                });
+            });
            // socket.send(position);
         }
         if (ServerMessage.type == "GuessResponse"){

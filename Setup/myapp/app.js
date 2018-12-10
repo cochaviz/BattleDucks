@@ -70,9 +70,15 @@ wss.on ("connection", function connection(ws){
     if (clientMsg.type == "I placed my ducks"){
       clientGame.setBoard(currentConnection, clientMsg.data);
       clientGame.playersReady(currentConnection);
-      if (clientGame.startGuessing() == 1){
-        let msg = messages.chose; 
-        clientGame.promtTurn().send(JSON.stringify(msg));
+      if (clientGame.startGuessing() == 1){//-----------------------------------------------------NOT HERE (DO SEPARATE FUNC??)
+        //this one time should also promt the user to change "dtrag ducks" to show "opponent board"
+        let msg = messages.bothPlayerReady; 
+        currentConnection.send(JSON.stringify(msg));
+        clientGame.getOtherPlayer(currentConnection).send(JSON.stringify(msg));
+        
+        //start poking game
+        let msg2 = messages.chose; 
+        clientGame.promtTurn().send(JSON.stringify(msg2));
       }
     }
     //req-resp cycle
