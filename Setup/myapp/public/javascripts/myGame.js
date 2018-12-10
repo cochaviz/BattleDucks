@@ -22,7 +22,7 @@ function readyState() {
         let used_tiles = returnBoard();
         insertDucks(used_tiles);
     } else {
-        $("#placeholder").html("Hey, you forgot me!").css({"transition": "ease-out"});
+        $("#placeholder").html("Hey, you forgot me!");
     }
 };
 
@@ -169,7 +169,7 @@ function moveChildrenFromTo(parent1, parent2) {
 
 // Update a tile given a status and coordinate
 function updateTile(coordinate, status, parent) {
-    $(parent + "> #\\("+coordinate[0]+"\\,"+coordinate[1]+"\\)").attr("class", "tile_"+status);
+    $(parent).find("#\\("+coordinate[0]+"\\,"+coordinate[1]+"\\)").attr("class", "tile_"+status);
 };
 
 // Insert all ducks into the player board permanently
