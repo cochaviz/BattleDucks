@@ -248,15 +248,16 @@ function ClientGame(){
     }
 
     this.updateBoard = function(poz, hit){
-        //hit = true/false or smth 
-        //update gui
+        if(hit){
+            updateTile(poz, 3, "#player_board");    //rip
+        }
         
     }
     this.updateOtherBoard = function(poz, hit){
         if(hit){
-            updateTile(poz, 3, "#opponent_board");//explosion
-        } else {
-            updateTile(poz, 1, "#opponent_board");//miss
+            updateTile(poz, 1, "#opponent_board");  //explosion
+        } if() {
+            updateTile(poz, 4, "#opponent_board");  //miss
         }
     }
 
@@ -269,12 +270,16 @@ function ClientGame(){
     game.generateAll(); // I have the same problem...
 
     socket.onmessage = function(event){
-        alert("recieved message: " + event.data);
+        // alert("recieved message: " + event.data);
         let ServerMessage = JSON.parse(event.data);
+        $("#placeholder").html("Let's get ready...");
+
         if (ServerMessage.type === "game is starting soon"){
             //var game = new ClientGame();
             //let ducks = game.createBoard();//returns array with boat poz
             $("#player_ready").click(function(){
+                $("#placeholder").html("We're ready!");
+
                 readyState(grid_size);
                 console.log("Stop clicking me!");
                 let ducks = returnBoard();
@@ -293,17 +298,17 @@ function ClientGame(){
         if (ServerMessage.type == "YourTurn"){//my turn to make a guess
             //mouse listener (separate function ?) Zohar
            // let position = game.takeAGuess();//returns a poz
+            $("#placeholder").html("Let's attack!!");
 
             $(document).ready(function(){
-                $("#opponent_grid > div").click(function(){
+                $("#opponent_grid").find(".tile_0").click(function(){
                     let coordinate_string = $(this).attr("id");
                     $("#results").html(coordinate_string);
+                    $("#placeholder").html("And now we wait...");
 
                     let position = [parseInt(coordinate_string.charAt(1)), parseInt(coordinate_string.charAt(3))];
-                    alert (position);
                     let myMsg = Messages.playerChose;
                     myMsg.data = position;
-                    alert("**" + JSON.stringify(myMsg));
                     socket.send(JSON.stringify(myMsg));
                 });
             });

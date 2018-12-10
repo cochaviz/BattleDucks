@@ -136,8 +136,8 @@ header {
     height: 50px;
 
     image-rendering:  -moz-crisp-edges;
-    background: url("../images/explosion.png");
-    background-size: 50px 50px;
+    background: url("../images/explosion.png") no-repeat center;
+    background-size: 40px 40px;
 }
 
 .tile_2 {
@@ -158,6 +158,16 @@ header {
     image-rendering:  -moz-crisp-edges;
     background: url("../images/f.png");
     background-size: 55px 55px;
+}
+
+.tile_4 {
+    display: block;
+    width: 50px;
+    height: 50px;
+
+    image-rendering:  -moz-crisp-edges;
+    background: url("../images/cross.png");
+    background-size: 50px 50px;
 }
 
 .grid {
