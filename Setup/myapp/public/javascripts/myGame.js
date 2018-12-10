@@ -14,20 +14,24 @@ function arraysEqual(a, b) {
 
 // Continue to the next game state
 function readyState(grid_size) {
+    console.log("Entered readyState()");//-------------------
     if(validBoard() || $("#forceReady").is(":checked")) {
+        
+    console.log("if start");//-------------------
         let used_tiles = returnBoard();
         insertDucks(used_tiles);
         generateGrid("opponent_board", "opponent_grid", grid_size, 0);
-        
+    console.log("if 2");//-------------------    
         $("#duckies").css({"visibility": "hidden", display: "none"});
         $("#opponent_board").css({"visibility": "visible", display: "block"});
-            
+    console.log("if 3");//-------------------        
         $("#opponent_grid > div").click(function(){
             $("#results").html($(this).attr("id"));
         });
-        
+    console.log("if start 4");//-------------------    
     } else {
         $("#placeholder").html("Hey, you forgot me!").css({"transition": "ease-out"});
+        console.log("else");//-------------------
     }
 }
 
@@ -188,7 +192,7 @@ function ClientGame(){
         // Generate required HTML elements
         generateGrid("player_board", "player_grid", grid_size, "snappable");
 
-        $(function(){
+        $(document).ready(function(){
             $(".ship").draggable({
                 snap: ".tile_snappable", snapTolerance : "40", snapMode: "inner",
         
@@ -232,6 +236,8 @@ function ClientGame(){
 
     this.createBoard = function(){
         //---------------------------------------------
+        a = [[2,2], [3,3]];
+        return a;
     };
     this.takeAGuess = function(){
         //Zohar

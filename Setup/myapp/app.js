@@ -3,7 +3,7 @@ var http = require("http");
 var path = require("path");
 var myRouter = require("./routes/myroutes");// imports routes
 var webSocket = require("ws");
-var stats = require("./public/javascripts/myStats");//imports global game stats (for tracking puposes)
+var stats = require("./myStats");//imports global game stats (for tracking puposes)
 var messages = require("./public/javascripts/mymessages");
 var Game = require("./game");//imports game specifics (object & methods)
 
