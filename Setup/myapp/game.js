@@ -1,7 +1,7 @@
 var game = function(gameId)  {
     this.player1 = null,//to be initialized with players id (ws connection id)
     this.player2 = null,
-    this.playerturn = 0,
+    this.playerturn = -1,
     this.cycleState = 0,
     this.board1 = null,
     this.board2 = null,
@@ -48,12 +48,20 @@ game.prototype.hasTwoPLayers = function(){
     return false;
 }
 
+
+game.prototype.validateTurn = function(playerId){
+    if (playerId == this.player1 && this.playerturn %2 == 0)
+        return true;
+    if (playerId == this.player2 && this.playerturn %2 != 0)
+        return true;
+    return false;
+}
+
 game.prototype.promtTurn = function(){//return player whos turn it is
+    this.playerturn ++;
     if (this.playerturn % 2 == 0){
-        this.playerturn ++;
         return this.player1;
     }else {
-        this.playerturn ++;//dublicated code :(
         return this.player2;
     }  
 }

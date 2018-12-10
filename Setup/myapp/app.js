@@ -83,37 +83,37 @@ wss.on ("connection", function connection(ws){
     }
     //req-resp cycle
     if (clientMsg.type == "Guess"){//horrible coding 
-      
-      //sends response back to client who requested
-      let hit = clientGame.checkHit(clientMsg.data, currentConnection);//--------------------------------
-      let msg = messages.GuessRes;
-      msg.poz = clientMsg.data;
-      msg.hit = hit;
-      currentConnection.send(JSON.stringify(msg));
-
-      //sends atack info to the other user
-      let msg2 = messages.Attack;//dif type of response for the opponent cause client side needs to know which board to update
-      msg2.poz = clientMsg.data;
-      msg2.hit = hit;
-      clientGame.getOtherPlayer(currentConnection).send(JSON.stringify(msg2));
-      console.log("{this position was hit ?}:"+ hit);
-
-      //checks if the atack was a wining one
-      if (clientGame.checkWin() == currentConnection){
-        //this guy won
-        
-        console.log (currentConnection.id + "won the game " + clientGame.id + "against other player :" +  clientGame.getOtherPlayer(currentConnection).in);
-        let msg = messages.gameWon;
+      if (clientGame.validateTurn(currentConnection) == true){
+        //sends response back to client who requested
+        let hit = clientGame.checkHit(clientMsg.data, currentConnection);//--------------------------------
+        let msg = messages.GuessRes;
+        msg.poz = clientMsg.data;
+        msg.hit = hit;
         currentConnection.send(JSON.stringify(msg));
-        let msg2 = messages.gameLost;
-        clientGame.getOtherPlayer(currentConnection).send(JSON.stringify(msg2));
-      }
-      else {
-        //promts the next user to take his turn
-        let msg3 = messages.chose; 
-        clientGame.promtTurn().send(JSON.stringify(msg3));
-      }
 
+        //sends atack info to the other user
+        let msg2 = messages.Attack;//dif type of response for the opponent cause client side needs to know which board to update
+        msg2.poz = clientMsg.data;
+        msg2.hit = hit;
+        clientGame.getOtherPlayer(currentConnection).send(JSON.stringify(msg2));
+        console.log("{this position was hit ?}:"+ msg2.poz+ "-->"+ hit);
+
+        //checks if the atack was a wining one
+        if (clientGame.checkWin() == currentConnection){
+          //this guy won
+          
+          console.log (currentConnection.id + "won the game " + clientGame.id + "against other player :" +  clientGame.getOtherPlayer(currentConnection).in);
+          let msg = messages.gameWon;
+          currentConnection.send(JSON.stringify(msg));
+          let msg2 = messages.gameLost;
+          clientGame.getOtherPlayer(currentConnection).send(JSON.stringify(msg2));
+        }
+        else {
+          //promts the next user to take his turn
+          let msg3 = messages.chose; 
+          clientGame.promtTurn().send(JSON.stringify(msg3));
+        }
+      }
     }
    
       //if (newMessage.type == messages.hello){
