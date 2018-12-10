@@ -329,4 +329,9 @@ function ClientGame(){
        // socket.send("hello");
         //alert("this is sending"); OK
     };
+
+    socket.onclose = function(){
+        // nothuing ?
+    };
+
 })();//this fucking thing took me 4h; for immediate run

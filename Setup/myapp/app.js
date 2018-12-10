@@ -123,8 +123,12 @@ wss.on ("connection", function connection(ws){
   currentConnection.on("close", function(code){
     console.log(currentConnection.id + " disconnected from game " + websockets[currentConnection.id]);
     let clientGame = websockets[currentConnection.id];
+    stats.abortedGames ++;
+
     let msg = messages.aborted;
     clientGame.getOtherPlayer(currentConnection).send(JSON.stringify(msg));
+   /* try {clientGame.getOtherPlayer(currentConnection).close();}
+    catch{console.log("huh abrot huh");}*/
    /* if (code == 1001){//client closed the game
       //abort game or print stats
     }*/
