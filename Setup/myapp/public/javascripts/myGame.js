@@ -178,6 +178,17 @@ function insertDucks(used_tiles) {
         updateTile(used_tiles[i], 2, "#player_board");
     }
 };
+
+function containsCoordinate(array, coordinate) {
+    for(let i=0; i<array.length; i++) {
+        if(arraysEqual(coordinate, array[i])) {
+            return true;
+        }
+    }
+    return false;
+}
+
+
 //-------------------------------------------------------------------------------------------------------
 
 function ClientGame(){
@@ -256,7 +267,7 @@ function ClientGame(){
     this.updateOtherBoard = function(poz, hit){
         if(hit){
             updateTile(poz, 1, "#opponent_board");  //explosion
-        } if() {
+        } else {
             updateTile(poz, 4, "#opponent_board");  //miss
         }
     }
@@ -264,10 +275,12 @@ function ClientGame(){
 }
 
 (function setup(){
-    var socket = new WebSocket("ws://localhost:3333");
-    var game = new ClientGame();
+    let socket = new WebSocket("ws://localhost:3333");
+    let game = new ClientGame();
     console.log("smth");// Doesn't show i don't know why...
     game.generateAll(); // I have the same problem...
+
+    let clicked_tiles = [];
 
     socket.onmessage = function(event){
         // alert("recieved message: " + event.data);
@@ -303,13 +316,16 @@ function ClientGame(){
             $(document).ready(function(){
                 $("#opponent_grid").find(".tile_0").click(function(){
                     let coordinate_string = $(this).attr("id");
-                    $("#results").html(coordinate_string);
-                    $("#placeholder").html("And now we wait...");
-
                     let position = [parseInt(coordinate_string.charAt(1)), parseInt(coordinate_string.charAt(3))];
-                    let myMsg = Messages.playerChose;
-                    myMsg.data = position;
-                    socket.send(JSON.stringify(myMsg));
+
+                    if(!(containsCoordinate(clicked_tiles, position))) {
+                        clicked_tiles.push(position);
+                        let myMsg = Messages.playerChose;
+                        myMsg.data = position;
+                        socket.send(JSON.stringify(myMsg));
+                        $("#placeholder").html("And now we wait...");
+                        timeout(1000);
+                    }
                 });
             });
            // socket.send(position);
