@@ -105,11 +105,13 @@ game.prototype.checkHit = function(position, playerId){
 game.prototype.checkWin = function(){
     let p1 = 0;
     for (i=0;i<this.board1.length;i++)
-        if (typeof this.board1[i][0] !== 'undefined' )  //if (!(this.board1[i][0] === "undefined"))
+        if (typeof this.board1[i][0] !== 'undefined'  && this.board1[i][0] >= 0){  //if (!(this.board1[i][0] === "undefined"))
             p1 = 1;
+            console.log(this.board1[i][0]);
+        }
     let p2 = 0;
     for (i=0;i<this.board2.length;i++)
-        if (typeof this.board2[i][0] !== "undefined")//if (!(this.board2[i][0] === "undefined"))
+        if (typeof this.board2[i][0] !== "undefined" && this.board2[i][0] >= 0)//if (!(this.board2[i][0] === "undefined"))
             p2 = 1;
     if (p2 == 0)
         return this.player1;//he won

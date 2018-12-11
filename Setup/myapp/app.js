@@ -101,7 +101,6 @@ wss.on ("connection", function connection(ws){
         //checks if the atack was a wining one
         if (clientGame.checkWin() == currentConnection){
           //this guy won
-          
           console.log (currentConnection.id + "won the game " + clientGame.id + "against other player :" +  clientGame.getOtherPlayer(currentConnection).in);
           let msg = messages.gameWon;
           currentConnection.send(JSON.stringify(msg));
