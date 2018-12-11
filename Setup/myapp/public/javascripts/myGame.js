@@ -311,8 +311,8 @@ function ClientGame(){
                     let position = [parseInt(coordinate_string.charAt(1)), parseInt(coordinate_string.charAt(3))];
 
                     // If the clicked div hasn't been clicked before
-                    if(!(containsCoordinate(clicked_tiles, position))) {
-                        clicked_tiles.push(position);
+                    //if(!(containsCoordinate(clicked_tiles, position))) {
+                    //    clicked_tiles.push(position);
 
                         // Send server message
                         let myMsg = Messages.playerChose;
@@ -321,21 +321,21 @@ function ClientGame(){
 
                         // Update player
                         $("#placeholder").html("And now we wait...");
-                    }
+                    //}
                 });
             });
         }
-        if (ServerMessage.type == "GuessResponse"){
+        if (ServerMessage.type === "GuessResponse"){
             game.updateOtherBoard(ServerMessage.poz, ServerMessage.hit);
         }
-        if (ServerMessage.type == "Hit"){//when this player gets atacked
+        if (ServerMessage.type === "Hit"){
             game.updateBoard(ServerMessage.poz, ServerMessage.hit);
         }
-        if (ServerMessage.type == "game aborted")
+        if (ServerMessage.type === "game aborted")
             alert("game was aborted");
-        if (ServerMessage.type == "gameWon")
+        if (ServerMessage.type === "gameWon")
             alert("YOU WON!");
-        if (ServerMessage.type == "gameLost")
+        if (ServerMessage.type === "gameLost")
             alert("You Lost! Start new game!");
       
     }
