@@ -1,0 +1,27 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font: 14px Helvetica, sans-serif;
+}
+
+main {
+    position: fixed;
+
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 500px;
+    height: 300px;
+}
+
+#play {
+    float: left;
+}
+
+#statistics {
+    float: right;
+}

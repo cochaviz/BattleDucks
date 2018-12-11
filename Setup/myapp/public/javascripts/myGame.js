@@ -1,6 +1,8 @@
-// ---- BEGIN FUNCTIONS ----
-var playerIsReady = false;
-var grid_size = 10;
+// DEBUG -- REMOVE FOR PROD
+let override = false;
+
+// Globals
+let grid_size = 10;
 
 // Check equality of arrays
 function arraysEqual(a, b) {
@@ -12,19 +14,7 @@ function arraysEqual(a, b) {
         if (a[i] !== b[i]) return false;
     }
     return true;
-};
-
-// Continue to the next game state
-function readyState() {
-    if(validBoard() || $("#forceReady").is(":checked")) {
-        playerIsReady = true;
-
-        let used_tiles = returnBoard();
-        insertDucks(used_tiles);
-    } else {
-        $("#placeholder").html("Hey, you forgot me!");
-    }
-};
+}
 
 // Show opponent board
 function showOpponent(grid_size) {
@@ -32,11 +22,7 @@ function showOpponent(grid_size) {
 
         $("#duckies").css({"visibility": "hidden", display: "none"});
         $("#opponent_board").css({"visibility": "visible", display: "block"});
-
-        // $("#opponent_grid > div").click(function(){
-        //     $("#results").html($(this).attr("id"));
-        // });
-};
+}
 
 
 // Generate a grid consisting of divs
@@ -56,7 +42,7 @@ function generateGrid(parent_id, grid_id, size, tile_status) {
             document.getElementById(grid_id).appendChild(element);
         }
     }
-};
+}
 
 // Calculate the coordinate of a ship cell within the player_grid
 function getUnitCoordinate(cell) {
@@ -72,7 +58,7 @@ function getUnitCoordinate(cell) {
     let grid_y = Math.round(position_top/tile.height.slice(0,2));
 
     return [grid_x, grid_y];
-};
+}
 
 // Return all the coordinates of the cells of a ship in a 2D array
 function getShipCoordinate(ship) {
@@ -83,7 +69,7 @@ function getShipCoordinate(ship) {
         cell_coordinates.push(getUnitCoordinate($(cells[i]), $("#player_grid")));
     }
     return cell_coordinates;
-};
+}
 
 // Check if ship postition is valid (e.g. within the boarders of the grid), and if not return to the last valid position
 function validPosition(this_ship, grid_size) {
@@ -96,7 +82,7 @@ function validPosition(this_ship, grid_size) {
         }
     }
     return true;
-};
+}
 
 // Check if ships aren't overlapping with each other
 function noOverlap() {
@@ -118,7 +104,7 @@ function noOverlap() {
         }
     }
     return true;
-};
+}
 
 // Check if all ships are in the board, and if they don't overlap
 function validBoard() {
@@ -133,7 +119,7 @@ function validBoard() {
         return true;
     }
     return false;
-};
+}
 
 // Return the coordinates of all ship tiles
 function returnBoard() {
@@ -148,37 +134,29 @@ function returnBoard() {
         }
     }
     return used_tiles;
-};
+}
 
 // Rotate children of a parent -90 dergrees
 function rotateChildren(parent) {
-    children = parent.children();
+    let children = parent.children();
     for(let i=0; i<children.length; i++) {
         $(children[i]).toggleClass("rotate_-90");
     }
-};
-
-// Move all children of a class to another class
-function moveChildrenFromTo(parent1, parent2) {
-    let children = parent1.children();
-    
-    for(let i=0; i<children.length; i++) {
-        $(children[i]).appendTo($(parent2));    
-    }
-};
+}
 
 // Update a tile given a status and coordinate
 function updateTile(coordinate, status, parent) {
     $(parent).find("#\\("+coordinate[0]+"\\,"+coordinate[1]+"\\)").attr("class", "tile_"+status);
-};
+}
 
 // Insert all ducks into the player board permanently
 function insertDucks(used_tiles) {
     for(let i=0; i<used_tiles.length; i++) {
         updateTile(used_tiles[i], 2, "#player_board");
     }
-};
+}
 
+// Checks if an array contains a coordinate
 function containsCoordinate(array, coordinate) {
     for(let i=0; i<array.length; i++) {
         if(arraysEqual(coordinate, array[i])) {
@@ -188,60 +166,61 @@ function containsCoordinate(array, coordinate) {
     return false;
 }
 
-
-//-------------------------------------------------------------------------------------------------------
-
+// Game Object
 function ClientGame(){
     this.myBoats = null;
     this.otherplayer = null;
 
     this.generateAll = function(){
-
+        // Last position of any ship
         let prev_left;
         let prev_top;
 
         // Generate required HTML elements
         generateGrid("player_board", "player_grid", grid_size, "snappable");
 
+        // UI functionality
         $(document).ready(function(){
+            let audioElement = document.createElement("audio");
+            audioElement.setAttribute("src", "sounds/oof.mp3");
+
             $(".ship").draggable({
                 snap: ".tile_snappable", snapTolerance : "40", snapMode: "inner",
         
                 start: function() {
+                    // Save where this is coming from
                     prev_left = $(this).css("left");
                     prev_top = $(this).css("top");
                 },
                 
                 stop: function() {
+                    // Revert changes if position is invalid
                     if(!(validPosition($(this), grid_size) && noOverlap())) {
                         $(this).css({left:prev_left, top:prev_top});
-                    } else {
-                        prev_left = $(this).css("left");
-                        prev_top = $(this).css("top");
                     }
                 }
         
             }).click(function() {
+                // Save previous position
                 prev_left = $(this).css("left");
                 prev_top = $(this).css("top");
-        
+
+                // Rotate ship and ship children
                 $(this).toggleClass("rotate_90");
                 rotateChildren($(this));
-                
+
+                // Revert rotation and position
                 if(!(validPosition($(this), grid_size) && noOverlap())) {
                     $(this).css({left:prev_left, top:prev_top});
+
                     $(this).toggleClass("rotate_90");
                     rotateChildren($(this));
         
                     $("#placeholder").html("QUACK! I cannot rotate here!").css({"transition": "ease-out"});
+                    audioElement.play();
                 }
         
             });
-        
-            // $("#player_ready").click(function(){
-            //     readyState(grid_size);
-            //     console.log("Stop clicking me!");
-            // }); 
         });
     };
 
@@ -250,28 +229,29 @@ function ClientGame(){
         a = [[2,2], [3,3]];
         return a;
     };
+
     this.takeAGuess = function(position){
         //Zohar
         //makes a valid guess, return (lin,col)
 
         let a = position;
         return a;
-    }
+    };
 
     this.updateBoard = function(poz, hit){
         if(hit){
             updateTile(poz, 3, "#player_board");    //rip
         }
         
-    }
+    };
+
     this.updateOtherBoard = function(poz, hit){
         if(hit){
             updateTile(poz, 1, "#opponent_board");  //explosion
         } else {
             updateTile(poz, 4, "#opponent_board");  //miss
         }
-    }
-
+    };
 }
 
 (function setup(){
@@ -283,52 +263,67 @@ function ClientGame(){
     let clicked_tiles = [];
 
     socket.onmessage = function(event){
-        // alert("recieved message: " + event.data);
         let ServerMessage = JSON.parse(event.data);
-        $("#placeholder").html("Let's get ready...");
+
+        if (ServerMessage.type === "Waiting for a player to join") {
+            // Update the player
+            $("#placeholder").html("Let's get ready...");
+        }
 
         if (ServerMessage.type === "game is starting soon"){
-            //var game = new ClientGame();
-            //let ducks = game.createBoard();//returns array with boat poz
-            $("#player_ready").click(function(){
-                $("#placeholder").html("We're ready!");
+            // Update the player
+            $("#player_ready").toggleClass("ready_clickable").html("Ready");
 
-                readyState(grid_size);
-                console.log("Stop clicking me!");
-                let ducks = returnBoard();
-                let myMsg = Messages.playerReady;
-                myMsg.data = ducks;
-                alert("**" + JSON.stringify(myMsg));
-                socket.send(JSON.stringify(myMsg));               
+            $(document).ready(function() {
+                $("#player_ready").click(function () {
+                    // Check if board is valid
+                    if(validBoard() || override) {
+                        // Update the player and make ready button ready button clickable
+                        $("#placeholder").html("We're ready!");
+                        $("#player_ready").toggleClass("ready_clickable").html("Waiting for other player...");
+
+                        // Make the placement permanent
+                        let used_tiles = returnBoard();
+                        insertDucks(used_tiles);
+
+                        // Generate and send server message
+                        let myMsg = Messages.playerReady;
+                        myMsg.data = used_tiles;
+                        socket.send(JSON.stringify(myMsg));
+                    } else {
+                        $("#placeholder").html("Hey, you forgot me!");
+                    }
+                });
             });
-
-           // socket.send(ducks);
         }
-        if (ServerMessage.type == "All ducks on deck"){//both boards are ready for battle
-            //shows oponents board(ZOHAR)
+        if (ServerMessage.type === "All ducks on deck"){//both boards are ready for battle
+            // Show opponent board
             showOpponent(grid_size);
         }
-        if (ServerMessage.type == "YourTurn"){//my turn to make a guess
-            //mouse listener (separate function ?) Zohar
-           // let position = game.takeAGuess();//returns a poz
+        if (ServerMessage.type === "YourTurn"){
+            // Update the player
             $("#placeholder").html("Let's attack!!");
 
             $(document).ready(function(){
                 $("#opponent_grid").find(".tile_0").click(function(){
+                    // Read coordinate from div id
                     let coordinate_string = $(this).attr("id");
                     let position = [parseInt(coordinate_string.charAt(1)), parseInt(coordinate_string.charAt(3))];
 
+                    // If the clicked div hasn't been clicked before
                     if(!(containsCoordinate(clicked_tiles, position))) {
                         clicked_tiles.push(position);
+
+                        // Send server message
                         let myMsg = Messages.playerChose;
                         myMsg.data = position;
                         socket.send(JSON.stringify(myMsg));
+
+                        // Update player
                         $("#placeholder").html("And now we wait...");
-                        timeout(1000);
                     }
                 });
             });
-           // socket.send(position);
         }
         if (ServerMessage.type == "GuessResponse"){
             game.updateOtherBoard(ServerMessage.poz, ServerMessage.hit);
@@ -355,4 +350,4 @@ function ClientGame(){
         // nothuing ?
     };
 
-})();//this fucking thing took me 4h; for immediate run
+})();

@@ -4,23 +4,19 @@
     <meta charset="UTF-8">
     <title>BattleDucks</title>
 </head>
+
+<link rel="stylesheet" type="text/css" href="stylesheets/splash.css">
+
 <body>
     <main>
-        <section id="play">
-            <!--Play button-->
-            <!--<button id="play_button">Play</button>  Original button-->
-            <button onclick="goPlay()" id="play_button">Play</button><!--faulty-->
-            <form method="get" action="/game">
-                <button type="submit">Play2</button>
-            </form><!--this redirects to /game? -->
-            <button onclick="window.location.href='/game'">Play3</button>
-            
+        <div id="play">
+            <button onclick="window.location.href='/game'">Play</button>
             <button id="help_button">Help</button>
-        </section>
+        </div>
 
 
-        <section id="statistics">
-            <h1>Statistics:</h1>
+        <div id="statistics">
+            <h2>Statistics:</h2>
 
             <ul>
                 <li id="n_players">current players</li>
@@ -28,7 +24,7 @@
                 <li id="n_ducks">ducks killed</li>
             </ul>
 
-        </section>
+        </div>
     </main>
 </body>
 </html>

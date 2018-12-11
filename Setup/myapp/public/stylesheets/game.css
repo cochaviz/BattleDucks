@@ -61,7 +61,6 @@ header {
     bottom:150px;
     right:300px;
 
-    font-family: "DejaV.u Sans Condensed";
     font-size: 20px;
     font-weight: bold;
 
@@ -71,29 +70,46 @@ header {
     animation-delay: 5s;
 }
 
-#ready {
-    background-color:#3464db;
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
-    border-radius:10px;
-    border:1px solid #152ab0;
+.ready_waiting {
+    background-color:#878f89;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+    border:1px solid #525752;
     display:inline-block;
     cursor:pointer;
     color:#ffffff;
-    font-family:Arial;
     font-size:16px;
-    font-weight:bold;
-    padding:15px 39px;
+    padding:15px 25px;
     text-decoration:none;
-    text-shadow:0px 1px 0px #2f6627;
+    text-shadow:0 1px 0 #2f6627;
 
     margin-top: 40px;
     margin-left: 40px;
 }
-#ready:hover {
+
+.ready_clickable {
+    background-color:#3464db;
+    -moz-border-radius:10px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+    border:1px solid #152ab0;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:16px;
+    font-weight:bold;
+    padding:15px 39px;
+    text-decoration:none;
+    text-shadow:0 1px 0 #2f6627;
+
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.ready_clickable:hover {
     background-color:#254980;
 }
-#ready:active {
+.ready_clickable:active {
     position:relative;
     top:1px;
 }
@@ -156,7 +172,7 @@ header {
     height: 50px;
 
     image-rendering:  -moz-crisp-edges;
-    background: url("../images/f.png");
+    background: url("../images/f.png") no-repeat center;
     background-size: 55px 55px;
 }
 
@@ -166,8 +182,8 @@ header {
     height: 50px;
 
     image-rendering:  -moz-crisp-edges;
-    background: url("../images/cross.png");
-    background-size: 50px 50px;
+    background: url("../images/cross.png") no-repeat center;
+    background-size: 45px 45px;
 }
 
 .grid {
@@ -183,11 +199,11 @@ header {
 }
 
 .board {
-    width: 500px;
+    width: 502px;
     margin: auto;
 }
 
-.ship_cell{
+.ship_cell {
     display: block; 
     width: 50px;
     height: 50px;
@@ -197,10 +213,10 @@ header {
     background: url("../images/ducky.png") no-repeat center;
     background-size: 45px 45px;
 
-    box-shadow: 0px 5px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0 5px 3px 0 rgba(0,0,0,0.75);
 }
 
-.ship{
+.ship {
     width: 50px;
     display: grid;
 
