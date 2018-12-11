@@ -1,8 +1,6 @@
-// DEBUG -- REMOVE FOR PROD
-let override = false;
-
 // Globals
 let grid_size = 10;
+let override = false;
 
 // Check equality of arrays
 function arraysEqual(a, b) {
@@ -16,12 +14,22 @@ function arraysEqual(a, b) {
     return true;
 }
 
+function showOverlay(message){
+    $("#overlay").css({"display" : "block"});
+    $("#overlay_title").html(message);
+}
+
+function hideOverlay(){
+    $("#overlay").css({"display" : "none"})
+}
+
 // Show opponent board
 function showOpponent(grid_size) {
         generateGrid("opponent_board", "opponent_grid", grid_size, 0);
 
         $("#duckies").css({"visibility": "hidden", display: "none"});
         $("#opponent_board").css({"visibility": "visible", display: "block"});
+        $("#statistics").css({"visibility" : "visible", display: "block"})
 }
 
 
@@ -168,9 +176,6 @@ function containsCoordinate(array, coordinate) {
 
 // Game Object
 function ClientGame(){
-    this.myBoats = null;
-    this.otherplayer = null;
-
     this.generateAll = function(){
         // Last position of any ship
         let prev_left;
@@ -224,20 +229,6 @@ function ClientGame(){
         });
     };
 
-    this.createBoard = function(){
-        //---------------------------------------------
-        a = [[2,2], [3,3]];
-        return a;
-    };
-
-    this.takeAGuess = function(position){
-        //Zohar
-        //makes a valid guess, return (lin,col)
-
-        let a = position;
-        return a;
-    };
-
     this.updateBoard = function(poz, hit){
         if(hit){
             updateTile(poz, 3, "#player_board");    //rip
@@ -255,12 +246,10 @@ function ClientGame(){
 }
 
 (function setup(){
-    let socket = new WebSocket("ws://localhost:3333");
+    let socket = new WebSocket("ws://localhost:4444");
     let game = new ClientGame();
     console.log("smth");// Doesn't show i don't know why...
     game.generateAll(); // I have the same problem...
-
-    let clicked_tiles = [];
 
     socket.onmessage = function(event){
         let ServerMessage = JSON.parse(event.data);
@@ -273,25 +262,30 @@ function ClientGame(){
         if (ServerMessage.type === "game is starting soon"){
             // Update the player
             $("#player_ready").toggleClass("ready_clickable").html("Ready");
+            let not_clicked = true;
 
             $(document).ready(function() {
                 $("#player_ready").click(function () {
                     // Check if board is valid
-                    if(validBoard() || override) {
-                        // Update the player and make ready button ready button clickable
-                        $("#placeholder").html("We're ready!");
-                        $("#player_ready").toggleClass("ready_clickable").html("Waiting for other player...");
+                    if(not_clicked) {
+                        if (validBoard() || override) {
+                            not_clicked = false;
 
-                        // Make the placement permanent
-                        let used_tiles = returnBoard();
-                        insertDucks(used_tiles);
+                            // Update the player
+                            $("#placeholder").html("We're ready!");
+                            $("#player_ready").toggleClass("ready_clickable").html("Waiting for other player...");
 
-                        // Generate and send server message
-                        let myMsg = Messages.playerReady;
-                        myMsg.data = used_tiles;
-                        socket.send(JSON.stringify(myMsg));
-                    } else {
-                        $("#placeholder").html("Hey, you forgot me!");
+                            // Make the placement permanent
+                            let used_tiles = returnBoard();
+                            insertDucks(used_tiles);
+
+                            // Generate and send server message
+                            let myMsg = Messages.playerReady;
+                            myMsg.data = used_tiles;
+                            socket.send(JSON.stringify(myMsg));
+                        } else {
+                            $("#placeholder").html("Hey, you forgot me!");
+                        }
                     }
                 });
             });
@@ -310,18 +304,13 @@ function ClientGame(){
                     let coordinate_string = $(this).attr("id");
                     let position = [parseInt(coordinate_string.charAt(1)), parseInt(coordinate_string.charAt(3))];
 
-                    // If the clicked div hasn't been clicked before
-                    //if(!(containsCoordinate(clicked_tiles, position))) {
-                    //    clicked_tiles.push(position);
+                    // Send server message
+                    let myMsg = Messages.playerChose;
+                    myMsg.data = position;
+                    socket.send(JSON.stringify(myMsg));
 
-                        // Send server message
-                        let myMsg = Messages.playerChose;
-                        myMsg.data = position;
-                        socket.send(JSON.stringify(myMsg));
-
-                        // Update player
-                        $("#placeholder").html("And now we wait...");
-                    //}
+                    // Update player
+                    $("#placeholder").html("And now we wait...");
                 });
             });
         }
@@ -332,13 +321,13 @@ function ClientGame(){
             game.updateBoard(ServerMessage.poz, ServerMessage.hit);
         }
         if (ServerMessage.type === "game aborted")
-            alert("game was aborted");
+            showOverlay("Your opponent left the game");
         if (ServerMessage.type === "gameWon")
-            alert("YOU WON!");
+            showOverlay("You won!");
         if (ServerMessage.type === "gameLost")
-            alert("You Lost! Start new game!");
+            showOverlay("You lost!");
       
-    }
+    };
     socket.onopen = function(){
         //let messageToServer = Messagez.hello;
         //socket.send(JSON.stringify(messageToServer));

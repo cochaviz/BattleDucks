@@ -77,13 +77,17 @@
                 </div>
 
                 <div id="ready">
-                    <a id="player_ready" class="ready_waiting">Waiting for player...</a>
+                    <a id="player_ready" class="ready_waiting">Waiting for player to join...</a>
                 </div>
                 <!--<input type="checkbox" id="forceReady" placeholder="forceReady?">-->
             </div>
 
             <div id="opponent_board" class="board">
                 <h1 class="title">Opponent</h1>
+            </div>
+
+            <div id="statistics">
+
             </div>
         </div>
 
@@ -96,10 +100,16 @@
         <div id="results"></div>
     </main>
 
-    <section id="endgame_overlay">
-        <button id="new_game">New Game</button>
-        <button id="main_menu">Main Menu</button>
-    </section>
+    <div id="overlay">
+        <div id="overlay_contents">
+            <h1 id="overlay_title" class="title">Congrats, you won without actually winning!</h1>
+
+            <div id="button_container">
+                <button id="new_game">New Game</button>
+                <button id="main_menu">Main Menu</button>
+            </div>
+        </div>
+    </div>
 </body>
     
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>

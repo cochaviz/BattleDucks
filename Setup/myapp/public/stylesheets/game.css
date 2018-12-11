@@ -1,6 +1,8 @@
 html {
     padding: 0;
     margin: 0;
+
+    background-color: #ffff4f;
 }
 
 body {
@@ -11,7 +13,7 @@ main {
     width: 1200px;
     margin-right: auto;
     margin-left: auto;
-    padding-top: 20px;
+    padding-top: 5%;
 }
 
 header {
@@ -36,6 +38,11 @@ header {
     float: left;
 }
 
+#statistics {
+    visibility: hidden;
+    display: none;
+}
+
 #duckies_border {
     width: 500px;
     height: 500px;
@@ -45,15 +52,56 @@ header {
 
 #duckies_container {
     display: grid;
-    width: 400px;
-    height: 480px;
+    width: 435px;
+    height: 500px;
 
     margin: 20px auto auto;
+    padding-left: 65px;
 
     grid-template-columns: repeat(5, 50px);
 
     grid-row-gap: 20px;
     grid-column-gap: 30px;
+
+    image-rendering: -moz-crisp-edges;
+    background: url("../images/grass.png") top left;
+    background-size: 50px 50px;
+    border: 1px solid black;
+}
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+#overlay_contents {
+    width: 700px;
+    background-color: #e7ef56;
+    border: 2px solid black;
+    margin-top: 10%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 20px;
+}
+
+#button_container{
+    width: 100px;
+    margin: 100px auto 20px;
+}
+
+#new_game {
+    margin-bottom: 30px;
 }
 
 #placeholder {
