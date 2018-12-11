@@ -6,15 +6,21 @@ var webSocket = require("ws");
 var stats = require("./myStats");//imports global game stats (for tracking puposes)
 var messages = require("./public/javascripts/mymessages");
 var Game = require("./game");//imports game specifics (object & methods)
-
 var port = process.argv[2];
 var app = express();
 
 app.use(express.static(__dirname + "/public"));
 
 //using imported routes (this happens before creating the server)
-app.get("/", myRouter);// to be rendered with a ejs templatev for stats
+//app.get("/", myRouter);// to be rendered with a ejs templatev for statsx
 app.get("/game", myRouter);
+
+app.set('views', __dirname + '/views')
+app.set("view engine", "ejs");
+app.get ('/', function (req, res) {
+  //res.render("splash.ejs", {InitializedGames: stats.newGames, AbortedGames: stats.abortedGames, random: "42"});
+  res.render("splash", {InitializedGames: stats.newGames, AbortedGames: stats.abortedGames, random: "42"});
+});
 
 //http.createServer(app).listen(port);
 var server = http.createServer(app);

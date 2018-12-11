@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>BattleDucks</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="stylesheets/splash.css">
+
+<body>
+    <main>
+        <div id="play">
+            <button onclick="window.location.href='/game'">Play</button>
+            <button id="help_button">Help</button>
+        </div>
+
+
+        <div id="statistics">
+            <h2>Statistics:</h2>
+
+
+            <div>
+
+                <h1> Number of games that have been initialized : <%= InitializedGames-1 %></h1>
+            <h1> Number of games that have been aborted : <%= AbortedGames %></h1>
+            <h1> Random Stat : <%= random %></h1>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
