@@ -14,11 +14,13 @@ function arraysEqual(a, b) {
     return true;
 }
 
+// Shows endgame overlay
 function showOverlay(message){
     $("#overlay").css({"display" : "block"});
     $("#overlay_title").html(message);
 }
 
+// DEBUG: Hides endgame overlay
 function hideOverlay(){
     $("#overlay").css({"display" : "none"})
 }
@@ -27,11 +29,24 @@ function hideOverlay(){
 function showOpponent(grid_size) {
         generateGrid("opponent_board", "opponent_grid", grid_size, 0);
 
+        let placeholder = document.createElement("div");
+        placeholder.setAttribute("id", "player_statistics");
+        document.getElementById("opponent_board").appendChild(placeholder);
+
         $("#duckies").css({"visibility": "hidden", display: "none"});
         $("#opponent_board").css({"visibility": "visible", display: "block"});
-        $("#statistics").css({"visibility" : "visible", display: "block"})
 }
 
+// Update the in-game statistics
+function updatePlayerStatistics(n_ducks_player, n_ducks_opponent, shots_fired) {
+    $("#player_statistics").html(
+        "<ul>" +
+        "   <li>Your ducks left:        "+ n_ducks_player +"</li>" +
+        "   <li>Opponent's ducks left:  "+ n_ducks_opponent +"</li>" +
+        "   <li>Shots fired:            "+ shots_fired +"</li>" +
+        "</ul>"
+    );
+}
 
 // Generate a grid consisting of divs
 function generateGrid(parent_id, grid_id, size, tile_status) {
@@ -176,6 +191,10 @@ function containsCoordinate(array, coordinate) {
 
 // Game Object
 function ClientGame(){
+    this.n_ducks_player = 29;
+    this.n_ducks_opponent = 29;
+    this.shots = 0;
+
     this.generateAll = function(){
         // Last position of any ship
         let prev_left;
@@ -183,6 +202,11 @@ function ClientGame(){
 
         // Generate required HTML elements
         generateGrid("player_board", "player_grid", grid_size, "snappable");
+
+        let placeholder = document.createElement("div");
+        placeholder.setAttribute("id", "placeholder");
+        document.getElementById("player_board").appendChild(placeholder);
+
 
         // UI functionality
         $(document).ready(function(){
@@ -230,15 +254,21 @@ function ClientGame(){
     };
 
     this.updateBoard = function(poz, hit){
+        this.shots++;
+
         if(hit){
             updateTile(poz, 3, "#player_board");    //rip
+            this.n_ducks_player--;
         }
         
     };
 
     this.updateOtherBoard = function(poz, hit){
+        this.shots++;
+
         if(hit){
             updateTile(poz, 1, "#opponent_board");  //explosion
+            this.n_ducks_opponent--;
         } else {
             updateTile(poz, 4, "#opponent_board");  //miss
         }
@@ -246,22 +276,22 @@ function ClientGame(){
 }
 
 (function setup(){
-    let socket = new WebSocket("ws://localhost:4444");
+    let socket = new WebSocket("ws://localhost:8888");
     let game = new ClientGame();
-    console.log("smth");// Doesn't show i don't know why...
-    game.generateAll(); // I have the same problem...
+    game.generateAll();
 
     socket.onmessage = function(event){
         let ServerMessage = JSON.parse(event.data);
 
         if (ServerMessage.type === "Waiting for a player to join") {
             // Update the player
-            $("#placeholder").html("Let's get ready...");
+            $("#placeholder").html("Hmmm... where is everybody?");
         }
 
         if (ServerMessage.type === "game is starting soon"){
             // Update the player
             $("#player_ready").toggleClass("ready_clickable").html("Ready");
+            $("#placeholder").html("Let's get ready!");
             let not_clicked = true;
 
             $(document).ready(function() {
@@ -279,6 +309,9 @@ function ClientGame(){
                             let used_tiles = returnBoard();
                             insertDucks(used_tiles);
 
+                            // Remove moveable ducks
+                            $(".ship").remove();
+
                             // Generate and send server message
                             let myMsg = Messages.playerReady;
                             myMsg.data = used_tiles;
@@ -293,6 +326,7 @@ function ClientGame(){
         if (ServerMessage.type === "All ducks on deck"){//both boards are ready for battle
             // Show opponent board
             showOpponent(grid_size);
+            updatePlayerStatistics(game.n_ducks_player, game.n_ducks_opponent, game.shots);
         }
         if (ServerMessage.type === "YourTurn"){
             // Update the player
@@ -316,9 +350,11 @@ function ClientGame(){
         }
         if (ServerMessage.type === "GuessResponse"){
             game.updateOtherBoard(ServerMessage.poz, ServerMessage.hit);
+            updatePlayerStatistics(game.n_ducks_player, game.n_ducks_opponent, game.shots);
         }
         if (ServerMessage.type === "Hit"){
             game.updateBoard(ServerMessage.poz, ServerMessage.hit);
+            updatePlayerStatistics(game.n_ducks_player, game.n_ducks_opponent, game.shots);
         }
         if (ServerMessage.type === "game aborted")
             showOverlay("Your opponent left the game");
