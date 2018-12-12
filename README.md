@@ -1,1 +1,3 @@
-# WebAppTest
+# BattleDucks
+---------
+Battleships with ducks!
