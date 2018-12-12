@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34f57b22-c704-4059-b73d-fe2cb7857514" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/public/game.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/public/game.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/public/javascripts/myGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/public/javascripts/myGame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/public/stylesheets/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/public/stylesheets/game.css" afterDir="false" />
-    </list>
+    <list default="true" id="34f57b22-c704-4059-b73d-fe2cb7857514" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +51,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myapp/public/stylesheets/game.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -83,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/myGame.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+            <state relative-caret-position="300">
+              <caret line="233" column="57" lean-forward="true" selection-start-line="233" selection-start-column="57" selection-end-line="233" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -117,10 +112,10 @@
       <find>place</find>
       <find>takeAgue</find>
       <find>padding</find>
-      <find>3333</find>
       <find>showOpp</find>
       <find>duckies</find>
       <find>showOp</find>
+      <find>3333</find>
     </findStrings>
     <replaceStrings>
       <replace>-moz-crisp-edges</replace>
@@ -246,12 +241,12 @@
       <option name="presentableId" value="Default" />
       <updated>1544435483834</updated>
       <workItem from="1544435485751" duration="18449000" />
-      <workItem from="1544531849770" duration="8543000" />
+      <workItem from="1544531849770" duration="9498000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26992000" />
+    <option name="totallyTimeSpent" value="27947000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -319,24 +314,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="111" column="18" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myapp/public/game.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
           <caret line="89" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/myGame.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -351,6 +332,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="111" column="18" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/myGame.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="233" column="57" lean-forward="true" selection-start-line="233" selection-start-column="57" selection-end-line="233" selection-end-column="57" />
         </state>
       </provider>
     </entry>
