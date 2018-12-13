@@ -14,13 +14,13 @@ function arraysEqual(a, b) {
     return true;
 }
 
-// Shows endgame overlay
+// Shows overlay
 function showOverlay(message){
     $("#overlay").css({"display" : "block"});
     $("#overlay_title").html(message);
 }
 
-// DEBUG: Hides endgame overlay
+// Hides overlay
 function hideOverlay(){
     $("#overlay").css({"display" : "none"})
 }
@@ -30,7 +30,7 @@ function showOpponent(grid_size) {
         generateGrid("opponent_board", "opponent_grid", grid_size, 0);
 
         let placeholder = document.createElement("div");
-        placeholder.setAttribute("id", "player_statistics");
+        placeholder.setAttribute("id", "statistics");
         document.getElementById("opponent_board").appendChild(placeholder);
 
         $("#duckies").css({"visibility": "hidden", display: "none"});
@@ -39,11 +39,11 @@ function showOpponent(grid_size) {
 
 // Update the in-game statistics
 function updatePlayerStatistics(n_ducks_player, n_ducks_opponent, shots_fired) {
-    $("#player_statistics").html(
+    $("#statistics").html(
         "<ul>" +
-        "   <li>Your ducks left:        "+ n_ducks_player +"</li>" +
-        "   <li>Opponent's ducks left:  "+ n_ducks_opponent +"</li>" +
-        "   <li>Shots fired:            "+ shots_fired +"</li>" +
+        "<li>Your ducks left:"+ n_ducks_player +"</li>" +
+        "<li>Opponent's ducks left:"+ n_ducks_opponent +"</li>" +
+        "<li>Shots fired:"+ shots_fired +"</li>" +
         "</ul>"
     );
 }

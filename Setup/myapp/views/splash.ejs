@@ -1,29 +1,46 @@
 <!DOCTYPE html>
-<head>
-    <title>BattleDucks</title>
-</head>
+    <head>
+        <title>BattleDucks</title>
+    </head>
 
-<link rel="stylesheet" type="text/css" href="stylesheets/splash.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/splash.css">
 
-<body>
-    <main>
-        <div id="play">
-            <button onclick="window.location.href='/game'">Play</button>
-            <button id="help_button">Help</button>
-        </div>
+    <body>
+        <main>
+            <div id="wrapper">
+                <div id="play">
+                    <div id="button container">
+                        <a id="play_button" onclick="window.location.href='/game'">Play</a>
+                        <a id="help_button" onclick="showOverlay('Welcome To BattleDucks')">Help</a>
+                    </div>
+                </div>
 
-
-        <div id="statistics">
-            <h2>Statistics:</h2>
-
-
-            <div>
-
-                <h1> Number of games that have been initialized : <%= InitializedGames-1 %></h1>
-            <h1> Number of games that have been aborted : <%= AbortedGames %></h1>
-            <h1> Random Stat : <%= random %></h1>
+                <div id="statistics">
+                    <ul>
+                        <li> Games started : <%= InitializedGames-1 %></li>
+                        <li> Left games: <%= AbortedGames %></li>
+                        <li> Random Stat: <%= random %></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </main>
-</body>
+
+            <div id="overlay" onclick="hideOverlay()">
+                <h1 id="overlay_title" class="title"></h1>
+
+                <div id="overlay_contents">
+                    <ul>
+                        <li>Set up your ducks by dragging them to your board, and rotate them by clicking</li>
+                        <li>As soon as a player has joined the game, the ready button will be clickable and you can start your game</li>
+                        <li>Try to defeat your opponent by neutralizing all his/her ducks first!</li>
+                    </ul>
+                </div>
+            </div>
+
+        </main>
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="javascripts/mySplash.js"></script>
+
 </html>

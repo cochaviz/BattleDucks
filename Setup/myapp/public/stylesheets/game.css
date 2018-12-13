@@ -1,20 +1,4 @@
-html {
-    padding: 0;
-    margin: 0;
-
-    background-color: #b3d1ff;
-}
-
-body {
-    font: 14px Helvetica, sans-serif;
-}
-
-main {
-    width: 1200px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 5%;
-}
+@import "style.css";
 
 header {
     padding-top: 20px;
@@ -28,19 +12,6 @@ header {
     from {visibility: visible}
     to {visibility: hidden;}
 }
-
-#player_statistics {
-    margin-top: 30px;
-
-    font-weight: bold;
-    font-size: 18px;
-}
-
-#player_statistics li {
-    list-style-type: none;
-    padding-bottom: 10px;
-}
-
 
 #header-img {
     border: 3px solid black;
@@ -80,33 +51,6 @@ header {
     background: url("../images/grass.png") top left;
     background-size: 50px 50px;
     border: 1px solid black;
-}
-
-#overlay {
-    position: fixed;
-    display: none;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 2;
-    cursor: pointer;
-}
-
-#overlay_contents {
-    width: 700px;
-    font-size: 25px;
-    background-color: #e7ef56;
-    border: 2px solid black;
-    margin-top: 10%;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    padding: 50px 60px;
 }
 
 #button_container{
@@ -238,10 +182,6 @@ header {
 #endgame_overlay {
     visibility: hidden;
     display: none;
-}
-
-.title {
-    text-align: center;
 }
 
 .tile_snappable {

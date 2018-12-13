@@ -1,25 +1,81 @@
-html {
-    padding: 0;
-    margin: 0;
+@import "style.css";
+
+#wrapper {
+    width: 650px;
+    height: 400px;
+
+    background-color: #bd71ed;
+
+    padding: 100px;
+    border: 1px solid black;
+
+    margin: 50px auto;
 }
 
-body {
-    font: 14px Helvetica, sans-serif;
-}
-
-main {
-    position: fixed;
-
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-
-    width: 500px;
-    height: 300px;
+#statistics {
+    margin-top: 120px;
 }
 
 #play {
+    height: 200px;
+    width: 100%;
     float: left;
+    text-align: center
+}
+
+#button\ container{
+    width: 200px;
+    text-align: center;
+}
+
+#play_button {
+    background-color:#3464db;
+    -moz-border-radius:10px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+    border:1px solid #152ab0;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:20px;
+    font-weight:bold;
+    padding:15px 60px;
+    text-decoration:none;
+    text-shadow:0 1px 0 #2f6627;
+
+    margin-bottom: 20px;
+}
+
+#play_button:hover {
+    background-color:#254980;
+}
+#play_button:active {
+    position:relative;
+    top:1px;
+}
+
+#help_button {
+    background-color:grey;
+    -moz-border-radius:10px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+    border:1px solid #152ab0;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:15px;
+    font-weight:bold;
+    padding:15px 39px;
+    text-decoration:none;
+    text-shadow:0 1px 0 #2f6627;
+}
+
+#help_button:hover {
+    background-color:#254980;
+}
+#help_button:active {
+    position:relative;
+    top:1px;
 }
 
 #statistics {
