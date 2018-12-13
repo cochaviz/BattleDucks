@@ -9,7 +9,14 @@ var Game = require("./game");//imports game specifics (object & methods)
 var port = process.argv[2];
 var app = express();
 
+var cookies = require("cookie-parser");//for, u guessed, cookies 
+var credentials = require("./cookieCredentials");
+app.use(cookies(credentials.cookieSecret));
+var myCookies = {};
+cookieId = 0;
+
 app.use(express.static(__dirname + "/public"));
+
 
 //using imported routes (this happens before creating the server)
 //app.get("/", myRouter);// to be rendered with a ejs templatev for statsx
@@ -18,7 +25,21 @@ app.get("/game", myRouter);
 app.set('views', __dirname + '/views')
 app.set("view engine", "ejs");
 app.get ('/', function (req, res) {
-  //res.render("splash.ejs", {InitializedGames: stats.newGames, AbortedGames: stats.abortedGames, random: "42"});
+  //res.render("splash.ejs", {InitializedGames: stats.newGames, AbortedGames: stats.abortedGames, random: "42"});modu
+  // res.cookie("visits", "0");
+  console.log(JSON.stringify(req.cookies));
+  if (req.cookies.id < cookieId){
+    mycookies[req.cookies.id] ++;
+    res.cookie("id", req.cookies.id);
+    console.log("COOKIEif: " + req.cookies.id + "    visitTimes:" + myCookies[req.cookies.id]);
+  }
+  else {
+    myCookies[cookieId++] = 1;
+    res.cookie("id", cookieId);
+    console.log("COOKIEelse: " + cookieId + "    visitTimes:" + myCookies[cookieId-1]);
+  }
+ // console.log("COOKIE: " + req.cookies);
+  console.log
   res.render("splash", {InitializedGames: stats.newGames, AbortedGames: stats.abortedGames, random: "42"});
 });
 
@@ -40,7 +61,7 @@ wss.on ("connection", function connection(ws){
   websockets[currentConnection.id] = currentGame;// links player to a game obj. Usefull for..?
 
   //currentConnection.send("connected");//debugging
-  console.log("[app.js] SERVER: this bitch: " +  currentConnection.id + " connected to this game: " + currentGame.id);
+  console.log("[app.js] SERVER: this user: " +  currentConnection.id + " connected to this game: " + currentGame.id);
   console.log("[app.js] SERVER: nr of games: " + stats.newGames);
 
   if (joinType == 1){
@@ -72,7 +93,7 @@ wss.on ("connection", function connection(ws){
       console.log("Server recievede HEY from client");*/
    /* if (message == "hey")
       console.log("**Server recievede HEY from client");*/
-    console.log("[Message from client]" + currentConnection.id + "**" + message);
+    console.log("SERVER:[Message from client]" + currentConnection.id + "**" + message);
     if (clientMsg.type == "I placed my ducks"){
       clientGame.setBoard(currentConnection, clientMsg.data);
       clientGame.playersReady(currentConnection);
@@ -102,7 +123,7 @@ wss.on ("connection", function connection(ws){
         msg2.poz = clientMsg.data;
         msg2.hit = hit;
         clientGame.getOtherPlayer(currentConnection).send(JSON.stringify(msg2));
-        console.log("{this position was hit ?}:"+ msg2.poz+ "-->"+ hit);
+        console.log("SERVER:{this position was hit ?}:"+ msg2.poz+ "-->"+ hit);
 
         //checks if the atack was a wining one
         if (clientGame.checkWin() == currentConnection){
@@ -131,8 +152,13 @@ wss.on ("connection", function connection(ws){
     stats.abortedGames ++;
 
     let msg = messages.aborted;
-    clientGame.getOtherPlayer(currentConnection).send(JSON.stringify(msg));
-   /* try {clientGame.getOtherPlayer(currentConnection).close();}
+    if (clientGame.getOtherPlayer(currentConnection) != -1)
+      clientGame.getOtherPlayer(currentConnection).send(JSON.stringify(msg));
+
+    
+    clientGame.disconnectPlayer(currentConnection);//this.playerId = -1;  DO IT IN A SEPPARATE FIELD    
+  
+    /* try {clientGame.getOtherPlayer(currentConnection).close();}
     catch{console.log("huh abrot huh");}*/
    /* if (code == 1001){//client closed the game
       //abort game or print stats

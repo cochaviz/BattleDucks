@@ -137,4 +137,12 @@ game.prototype.startGuessing = function(){//for the first player turn promt
     return 0;
 }
 
+game.prototype.disconnectPlayer = function(playerId){
+    if (this.player1 == playerId)
+        this.player1 = -1;
+    if (this.player2 == playerId)
+        this.player2 = -1;
+}
+
+
 module.exports = game;

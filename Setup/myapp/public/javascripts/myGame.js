@@ -356,12 +356,19 @@ function ClientGame(){
             game.updateBoard(ServerMessage.poz, ServerMessage.hit);
             updatePlayerStatistics(game.n_ducks_player, game.n_ducks_opponent, game.shots);
         }
-        if (ServerMessage.type === "game aborted")
+        if (ServerMessage.type === "game aborted"){
             showOverlay("Your opponent left the game");
-        if (ServerMessage.type === "gameWon")
+            //socket.close();
+        }
+        if (ServerMessage.type === "gameWon"){
             showOverlay("You won!");
-        if (ServerMessage.type === "gameLost")
+            socket.close();
+        }
+        if (ServerMessage.type === "gameLost"){
             showOverlay("You lost!");
+            socket.close();
+        }
+            
       
     };
     socket.onopen = function(){
@@ -372,7 +379,9 @@ function ClientGame(){
     };
 
     socket.onclose = function(){
-        // nothuing ?
+        // nothing ?
     };
+    socket.onerror = function(){  
+    };//idk
 
 })();
