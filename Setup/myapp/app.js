@@ -27,19 +27,20 @@ app.set("view engine", "ejs");
 app.get ('/', function (req, res) {
   //res.render("splash.ejs", {InitializedGames: stats.newGames, AbortedGames: stats.abortedGames, random: "42"});modu
   // res.cookie("visits", "0");
-  console.log(JSON.stringify(req.cookies));
-  if (req.cookies.id < cookieId){
-    mycookies[req.cookies.id] ++;
+  console.log("helooo bello " + JSON.stringify(req.cookies));
+  if (req.cookies.id){//
+    myCookies[req.cookies.id] ++;// increment the number of vizits for this user
     res.cookie("id", req.cookies.id);
-    console.log("COOKIEif: " + req.cookies.id + "    visitTimes:" + myCookies[req.cookies.id]);
+    console.log("COOKIEif: ");
+    console.log( req.cookies.id + "    visitTimes:" + myCookies[req.cookies.id]);
   }
   else {
     myCookies[cookieId++] = 1;
-    res.cookie("id", cookieId);
-    console.log("COOKIEelse: " + cookieId + "    visitTimes:" + myCookies[cookieId-1]);
+    res.cookie("id", cookieId-1);
+    console.log("COOKIEelse: " );
+    console.log( cookieId-1 + "    visitTimes:" + myCookies[cookieId-1]);
   }
  // console.log("COOKIE: " + req.cookies);
-  console.log
   res.render("splash", {InitializedGames: stats.newGames, AbortedGames: stats.abortedGames, random: "42"});
 });
 
