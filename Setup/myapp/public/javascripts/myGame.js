@@ -39,7 +39,7 @@ function hideOverlay(){
 
 // Show opponent board
 function showOpponent(grid_size) {
-        generateGrid("opponent_board", "opponent_grid", grid_size, "0_1");
+        generateGrid("opponent_board", "opponent_grid", grid_size, "0");
 
         let placeholder = document.createElement("div");
         placeholder.setAttribute("id", "statistics");
@@ -204,8 +204,8 @@ function containsCoordinate(array, coordinate) {
 
 // Game Object
 function ClientGame(){
-    this.n_ducks_player = 29;
-    this.n_ducks_opponent = 29;
+    this.n_ducks_player = null;
+    this.n_ducks_opponent = null;
     this.shots = 0;
 
     this.clicked_tiles = [];
@@ -270,7 +270,6 @@ function ClientGame(){
 
     this.updateBoard = function(poz, hit){
         this.shots++;
-        this.clicked_tiles.push(poz);
 
         if(hit) {
             updateTile(poz, 3, "#player_board");    //rip
@@ -325,6 +324,10 @@ function ClientGame(){
                             let used_tiles = returnBoard();
                             insertDucks(used_tiles);
 
+                            // Update game object
+                            game.n_ducks_player = used_tiles.length;
+                            game.n_ducks_opponent = used_tiles.length;
+
                             // Remove moveable ducks
                             $(".ship").remove();
 
@@ -349,7 +352,7 @@ function ClientGame(){
             $("#placeholder").html("Let's attack!!");
 
             $(document).ready(function(){
-                $(".tile_0_1").click(function(){
+                $(".tile_0").click(function(){
                         // Read coordinate from div id
                     let coordinate_string = $(this).attr("id");
                     let position = [parseInt(coordinate_string.charAt(1)), parseInt(coordinate_string.charAt(3))];

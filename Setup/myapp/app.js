@@ -65,10 +65,10 @@ wss.on ("connection", function connection(ws){
   console.log("[app.js] SERVER: this user: " +  currentConnection.id + " connected to this game: " + currentGame.id);
   console.log("[app.js] SERVER: nr of games: " + stats.newGames);
 
-  if (joinType == 1){
+  if (joinType === 1){
     let message = messages.waitForPLayer;
     currentConnection.send(JSON.stringify(message));
-  }else if (joinType == 2){
+  }else if (joinType === 2){
     let message = messages.gameStarting;
     currentConnection.send(JSON.stringify(message));
     let otherPlayer = currentGame.getOtherPlayer(currentConnection);
@@ -81,7 +81,7 @@ wss.on ("connection", function connection(ws){
     otherPLayer.send(JSON.stringify(message));
   }
 
-  if (currentGame.hasTwoPLayers() == true){
+  if (currentGame.hasTwoPLayers()){
     currentGame = new Game(stats.newGames++);//add param ?
   }
 
@@ -95,10 +95,10 @@ wss.on ("connection", function connection(ws){
    /* if (message == "hey")
       console.log("**Server recievede HEY from client");*/
     console.log("SERVER:[Message from client]" + currentConnection.id + "**" + message);
-    if (clientMsg.type == "I placed my ducks"){
+    if (clientMsg.type === "I placed my ducks"){
       clientGame.setBoard(currentConnection, clientMsg.data);
       clientGame.playersReady(currentConnection);
-      if (clientGame.startGuessing() == 1){//-----------------------------------------------------NOT HERE (DO SEPARATE FUNC??)
+      if (clientGame.startGuessing() === 1){//-----------------------------------------------------NOT HERE (DO SEPARATE FUNC??)
         //this one time should also promt the user to change "dtrag ducks" to show "opponent board"
         let msg = messages.bothPlayerReady; 
         currentConnection.send(JSON.stringify(msg));
@@ -110,8 +110,8 @@ wss.on ("connection", function connection(ws){
       }
     }
     //req-resp cycle
-    if (clientMsg.type == "Guess"){//horrible coding 
-      if (clientGame.validateTurn(currentConnection) == true){
+    if (clientMsg.type === "Guess"){//horrible coding
+      if (clientGame.validateTurn(currentConnection)){
         //sends response back to client who requested
         let hit = clientGame.checkHit(clientMsg.data, currentConnection);//--------------------------------
         let msg = messages.GuessRes;
@@ -127,7 +127,7 @@ wss.on ("connection", function connection(ws){
         console.log("SERVER:{this position was hit ?}:"+ msg2.poz+ "-->"+ hit);
 
         //checks if the atack was a wining one
-        if (clientGame.checkWin() == currentConnection){
+        if (clientGame.checkWin() === currentConnection){
           //this guy won
           console.log (currentConnection.id + "won the game " + clientGame.id + "against other player :" +  clientGame.getOtherPlayer(currentConnection).in);
           let msg = messages.gameWon;
@@ -153,7 +153,7 @@ wss.on ("connection", function connection(ws){
     stats.abortedGames ++;
 
     let msg = messages.aborted;
-    if (clientGame.getOtherPlayer(currentConnection) != -1)
+    if (clientGame.getOtherPlayer(currentConnection) !== -1)
       clientGame.getOtherPlayer(currentConnection).send(JSON.stringify(msg));
 
     
