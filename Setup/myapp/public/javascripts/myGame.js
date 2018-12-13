@@ -14,6 +14,18 @@ function arraysEqual(a, b) {
     return true;
 }
 
+function hasCoordinate(arr, coordinate) {
+    if (arr == null || coordinate == null)
+        return false;
+
+    for(let i=0; i<arr.length; i++) {
+        if(arraysEqual(arr[i], coordinate)) {
+            return true;
+        }
+    }
+    return false;
+}
+
 // Shows overlay
 function showOverlay(message){
     $("#overlay").css({"display" : "block"});
@@ -27,12 +39,13 @@ function hideOverlay(){
 
 // Show opponent board
 function showOpponent(grid_size) {
-        generateGrid("opponent_board", "opponent_grid", grid_size, 0);
+        generateGrid("opponent_board", "opponent_grid", grid_size, "0_1");
 
         let placeholder = document.createElement("div");
         placeholder.setAttribute("id", "statistics");
         document.getElementById("opponent_board").appendChild(placeholder);
 
+        $("#statistics").css({"display" : "block", "visibility": "visible"});
         $("#duckies").css({"visibility": "hidden", display: "none"});
         $("#opponent_board").css({"visibility": "visible", display: "block"});
 }
@@ -41,9 +54,9 @@ function showOpponent(grid_size) {
 function updatePlayerStatistics(n_ducks_player, n_ducks_opponent, shots_fired) {
     $("#statistics").html(
         "<ul>" +
-        "<li>Your ducks left:"+ n_ducks_player +"</li>" +
-        "<li>Opponent's ducks left:"+ n_ducks_opponent +"</li>" +
-        "<li>Shots fired:"+ shots_fired +"</li>" +
+        "<li>Your ducks left: "+ n_ducks_player +"</li>" +
+        "<li>Opponent's ducks left: "+ n_ducks_opponent +"</li>" +
+        "<li>Shots fired: "+ shots_fired +"</li>" +
         "</ul>"
     );
 }
@@ -195,6 +208,8 @@ function ClientGame(){
     this.n_ducks_opponent = 29;
     this.shots = 0;
 
+    this.clicked_tiles = [];
+
     this.generateAll = function(){
         // Last position of any ship
         let prev_left;
@@ -255,16 +270,17 @@ function ClientGame(){
 
     this.updateBoard = function(poz, hit){
         this.shots++;
+        this.clicked_tiles.push(poz);
 
-        if(hit){
+        if(hit) {
             updateTile(poz, 3, "#player_board");    //rip
             this.n_ducks_player--;
         }
-        
     };
 
     this.updateOtherBoard = function(poz, hit){
         this.shots++;
+        this.clicked_tiles.push(poz);
 
         if(hit){
             updateTile(poz, 1, "#opponent_board");  //explosion
@@ -333,18 +349,20 @@ function ClientGame(){
             $("#placeholder").html("Let's attack!!");
 
             $(document).ready(function(){
-                $("#opponent_grid").find(".tile_0").click(function(){
-                    // Read coordinate from div id
+                $(".tile_0_1").click(function(){
+                        // Read coordinate from div id
                     let coordinate_string = $(this).attr("id");
                     let position = [parseInt(coordinate_string.charAt(1)), parseInt(coordinate_string.charAt(3))];
 
-                    // Send server message
-                    let myMsg = Messages.playerChose;
-                    myMsg.data = position;
-                    socket.send(JSON.stringify(myMsg));
+                    if(!hasCoordinate(game.clicked_tiles, position)){
+                        // Send server message
+                        let myMsg = Messages.playerChose;
+                        myMsg.data = position;
+                        socket.send(JSON.stringify(myMsg));
 
-                    // Update player
-                    $("#placeholder").html("And now we wait...");
+                        // Update player
+                        $("#placeholder").html("And now we wait...");
+                    }
                 });
             });
         }

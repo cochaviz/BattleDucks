@@ -4,12 +4,15 @@
     width: 650px;
     height: 400px;
 
-    background-color: #bd71ed;
-
     padding: 100px;
-    border: 1px solid black;
 
-    margin: 50px auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#wrapper img {
+    display: none;
+    width: 220px;
 }
 
 #statistics {
@@ -19,35 +22,36 @@
 #play {
     height: 200px;
     width: 100%;
-    float: left;
     text-align: center
 }
 
 #button\ container{
-    width: 200px;
+    width: 100%;
     text-align: center;
 }
 
 #play_button {
-    background-color:#3464db;
+    width: 80%;
+
+    background-color: red;
     -moz-border-radius:10px;
     -webkit-border-radius:8px;
     border-radius:8px;
-    border:1px solid #152ab0;
+    border:1px solid darkred;
     display:inline-block;
     cursor:pointer;
     color:#ffffff;
-    font-size:20px;
+    font-size:40px;
     font-weight:bold;
-    padding:15px 60px;
+    padding:40px 60px;
     text-decoration:none;
     text-shadow:0 1px 0 #2f6627;
 
-    margin-bottom: 20px;
+    margin: 20px auto;
 }
 
 #play_button:hover {
-    background-color:#254980;
+    background-color: darkred;
 }
 #play_button:active {
     position:relative;
@@ -55,11 +59,11 @@
 }
 
 #help_button {
-    background-color:grey;
+    background-color:darkgrey;
     -moz-border-radius:10px;
     -webkit-border-radius:8px;
     border-radius:8px;
-    border:1px solid #152ab0;
+    border:1px solid black;
     display:inline-block;
     cursor:pointer;
     color:#ffffff;
@@ -71,7 +75,7 @@
 }
 
 #help_button:hover {
-    background-color:#254980;
+    background-color:grey;
 }
 #help_button:active {
     position:relative;
