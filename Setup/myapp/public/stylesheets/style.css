@@ -1,15 +1,20 @@
 :root {
-    --bg-main--color: #b3d1ff;
+    --bg-main--color: #71bbe8;
     --overlay-color: #e7ef56;
 }
 
-html {
-    padding: 0;
-    margin: 0;
 
+@keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+}
+
+html {
     image-rendering: -moz-crisp-edges;
     background: var(--bg-main--color) url("../images/bg.jpg") top;
     background-size: 50%;
+
+    animation: animatedBackground 50s linear infinite;
 }
 
 body {
