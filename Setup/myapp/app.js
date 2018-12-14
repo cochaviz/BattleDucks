@@ -156,7 +156,7 @@ wss.on ("connection", function connection(ws){
 
     let msg = messages.aborted;
 
-    if (clientGame.getOtherPlayer(currentConnection) !== -1)
+    if (clientGame.getOtherPlayer(currentConnection) !== -1 && clientGame.getOtherPlayer(currentConnection) !== null)
       clientGame.getOtherPlayer(currentConnection).send(JSON.stringify(msg));
 
     

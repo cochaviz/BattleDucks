@@ -80,7 +80,10 @@ header {
     grid-row-gap: 20px;
     grid-column-gap: 30px;
 
-    image-rendering: -moz-crisp-edges;
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering:   -o-crisp-edges;         /* Opera */
+    image-rendering: pixelated;
+
     background: url("../images/ice.png") top left;
     background-size: 50px 50px;
     border: 1px solid black;
@@ -178,6 +181,7 @@ header {
 }
 
 #main_menu {
+    width: 100px;
     background-color: darkgrey;
     -moz-border-radius:10px;
     -webkit-border-radius:8px;
@@ -202,6 +206,8 @@ header {
 }
 
 #stay_button {
+    width: 60px;
+
     background-color:red;
     -moz-border-radius:10px;
     -webkit-border-radius:8px;
@@ -215,14 +221,42 @@ header {
     padding:18px 50px;
     text-decoration:none;
     text-shadow:0 1px 0 #2f6627;
+
+    float: left;
 }
-
-
 
 #stay_button:hover {
     background-color:darkred;
 }
 #stay_button:active {
+    position:relative;
+    top:1px;
+}
+
+#leave_button {
+    width: 60px;
+
+    background-color:darkgrey;
+    -moz-border-radius:10px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+    border:1px solid black;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:26px;
+    font-weight:bold;
+    padding:18px 50px;
+    text-decoration:none;
+    text-shadow:0 1px 0 #2f6627;
+
+    float: right;
+}
+
+#leave_button:hover {
+    background-color:grey;
+}
+#leave_button:active {
     position:relative;
     top:1px;
 }
@@ -241,6 +275,13 @@ header {
 #endgame_overlay {
     visibility: hidden;
     display: none;
+}
+
+#quit_button_container {
+    width: 70%;
+    height: 20%;
+
+    padding-bottom: 10%;
 }
 
 .tile_snappable {
@@ -265,7 +306,10 @@ header {
     width: 50px;
     height: 50px;
 
-    image-rendering:  -moz-crisp-edges;
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering:   -o-crisp-edges;         /* Opera */
+    image-rendering: pixelated;
+    
     background: url("../images/explosion.png") no-repeat center;
     background-size: 40px 40px;
 }
@@ -275,7 +319,10 @@ header {
     width: 50px;
     height: 50px;
 
-    image-rendering:  -moz-crisp-edges;
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering:   -o-crisp-edges;         /* Opera */
+    image-rendering: pixelated;
+    
     background: url("../images/festive_ducky.png") no-repeat center;
     background-size: 45px 45px;
 }
@@ -285,7 +332,10 @@ header {
     width: 50px;
     height: 50px;
 
-    image-rendering:  -moz-crisp-edges;
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering:   -o-crisp-edges;         /* Opera */
+    image-rendering: pixelated;
+    
     background: url("../images/f2.png") no-repeat;
     background-size: 48px 50px;
 
@@ -297,7 +347,10 @@ header {
     width: 50px;
     height: 50px;
 
-    image-rendering:  -moz-crisp-edges;
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering:   -o-crisp-edges;         /* Opera */
+    image-rendering: pixelated;
+    
     background: url("../images/cross.png") no-repeat center;
     background-size: 45px 45px;
 }
@@ -307,7 +360,10 @@ header {
     grid-template-columns: repeat(10, 50px);
     grid-template-rows: repeat(10, 50px);
 
-    image-rendering: -moz-crisp-edges;
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering:   -o-crisp-edges;         /* Opera */
+    image-rendering: pixelated;
+    
     background: url("../images/water.png") top left;
     background-size: 50px 50px;
 
@@ -325,7 +381,10 @@ header {
     width: 50px;
     height: 50px;
 
-    image-rendering:  -moz-crisp-edges;
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering:   -o-crisp-edges;         /* Opera */
+    image-rendering: pixelated;
+    
 
     background: url("../images/festive_ducky.png") no-repeat center;
     background-size: 45px 45px;
