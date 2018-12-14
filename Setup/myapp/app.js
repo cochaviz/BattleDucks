@@ -25,7 +25,8 @@ app.set("view engine", "ejs");
 
 app.get("/game", myRouter);
 app.get ('/', function (req, res) {// move to myRoutes
-  if (req.cookies.id){//if this cookie already exists
+  //Server side cookie
+ /* if (req.cookies.id){//if this cookie already exists
     myCookies[req.cookies.id] ++;// increment the number of vizits for this user
     res.cookie("id", req.cookies.id);
     console.log( req.cookies.id + "    visitTimes:" + myCookies[req.cookies.id]);
@@ -34,7 +35,7 @@ app.get ('/', function (req, res) {// move to myRoutes
     myCookies[cookieId++] = 1;
     res.cookie("id", cookieId-1);
     console.log( cookieId-1 + "    visitTimes:" + myCookies[cookieId-1]);
-  }
+  }*/
   res.render("splash", {InitializedGames: stats.newGames, AbortedGames: stats.abortedGames, PlayersJoined: stats.playersJoined});
 });
 

@@ -212,6 +212,7 @@ function ClientGame(){
     this.n_ducks_player = null;
     this.n_ducks_opponent = null;
     this.shots = 0;
+    this.visits = 0;
 
     this.clicked_tiles = [];
 
@@ -398,6 +399,19 @@ function ClientGame(){
       
     };
     socket.onopen = function(){
+
+        var cookieArray = document.cookie.split(";");
+        if (cookieArray[0] === ""){
+            document.cookie = "visits=1";
+            game.visits = 1;
+        }
+        else {
+            var CookieX = cookieArray[cookieArray.length-1];//gets last cookie
+            var CookieParts = CookieX.split("=");
+            var nr = parseInt(CookieParts[1]) + 1;//this should convert it to a number ?
+            document.cookie = "visits=" + nr;
+            game.visits = nr;
+        }
     };
 
     socket.onclose = function(){
@@ -405,5 +419,5 @@ function ClientGame(){
     };
     socket.onerror = function(){  
     };//idk
-
+  
 })();
