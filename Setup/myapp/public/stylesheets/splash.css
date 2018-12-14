@@ -1,10 +1,18 @@
 @import "style.css";
 
+#banner_title {
+    font-size: 100px;
+}
+
+#fullscreen {
+    float: right;
+}
+
 #wrapper {
     width: 750px;
     height: 400px;
 
-    padding: 100px;
+    padding: 50px;
 
     margin-left: auto;
     margin-right: auto;
@@ -59,11 +67,16 @@
     text-decoration:none;
     text-shadow:0 1px 0 #2f6627;
 
+    -webkit-transition: background 2s;
+    -o-transition: background 2s;
+    -moz-transition: background 0.3s;
+    transition: background 0.3s;
+
     margin: 20px auto;
 }
 
 #play_button:hover {
-    background-color: darkred;
+    background-color: forestgreen;
 }
 #play_button:active {
     position:relative;
@@ -102,4 +115,12 @@
 #overlay_title {
     margin-bottom: 55px;
     text-decoration: underline;
+}
+
+#overlay_title::before {
+    content: "!";
+}
+
+#overlay_title::after {
+    content: "!";
 }

@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34f57b22-c704-4059-b73d-fe2cb7857514" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/myapp/public/images/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/public/images/bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/public/game.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/public/game.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/public/javascripts/myGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/public/javascripts/myGame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/public/splash.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/public/splash.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/public/stylesheets/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/public/stylesheets/game.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/public/stylesheets/splash.css" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/public/stylesheets/splash.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myapp/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/public/stylesheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/views/splash.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/views/splash.ejs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +35,7 @@
           <entry key="css" value="7" />
           <entry key="ejs" value="2" />
           <entry key="html" value="8" />
-          <entry key="js" value="30" />
+          <entry key="js" value="31" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
@@ -38,24 +44,24 @@
           <entry key="CSS" value="7" />
           <entry key="EJS" value="2" />
           <entry key="HTML" value="8" />
-          <entry key="JavaScript" value="30" />
+          <entry key="JavaScript" value="31" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="1453" />
-          <entry key="ejs" value="962" />
-          <entry key="html" value="817" />
-          <entry key="js" value="4840" />
+          <entry key="css" value="1845" />
+          <entry key="ejs" value="1045" />
+          <entry key="html" value="916" />
+          <entry key="js" value="4927" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="1453" />
-          <entry key="EJS" value="962" />
-          <entry key="HTML" value="821" />
-          <entry key="JavaScript" value="4836" />
+          <entry key="CSS" value="1845" />
+          <entry key="EJS" value="1045" />
+          <entry key="HTML" value="920" />
+          <entry key="JavaScript" value="4923" />
         </counts>
       </usages-collector>
     </session>
@@ -65,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myapp/public/stylesheets/game.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="91" column="18" lean-forward="true" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
+            <state relative-caret-position="165">
+              <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -74,17 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myapp/public/game.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="100" column="14" lean-forward="true" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myapp/game.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+            <state relative-caret-position="285">
+              <caret line="19" column="82" selection-start-line="19" selection-start-column="82" selection-end-line="19" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -92,8 +89,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myapp/public/stylesheets/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+            <state relative-caret-position="345">
+              <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myapp/public/stylesheets/splash.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/myGame.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="538">
+              <caret line="413" column="56" selection-start-line="413" selection-start-column="56" selection-end-line="413" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -101,31 +116,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myapp/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1098">
-              <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/jquery.ui.touch-punch.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myapp/routes/myroutes.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/myGame.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="886">
-              <caret line="403" column="8" lean-forward="true" selection-start-line="403" selection-start-column="8" selection-end-line="403" selection-end-column="20" />
+            <state relative-caret-position="480">
+              <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -133,17 +125,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myapp/views/splash.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="613">
-              <caret line="46" column="57" lean-forward="true" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="57" />
+            <state relative-caret-position="285">
+              <caret line="19" column="90" selection-start-line="19" selection-start-column="90" selection-end-line="19" selection-end-column="90" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/mySplash.js">
+        <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/myScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
+            <state relative-caret-position="225">
+              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -160,7 +152,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>padding</find>
       <find>showOp</find>
       <find>generateall</find>
       <find>duckies</find>
@@ -169,7 +160,6 @@
       <find>board</find>
       <find>grid_size</find>
       <find>updatePla</find>
-      <find>place</find>
       <find>title</find>
       <find>stat</find>
       <find>showOppo</find>
@@ -177,7 +167,6 @@
       <find>showOpp</find>
       <find>0_1</find>
       <find>6666</find>
-      <find>8888</find>
       <find>rotatechil</find>
       <find>valid</find>
       <find>generateALl</find>
@@ -186,10 +175,13 @@
       <find>hasCoord</find>
       <find>.grid</find>
       <find>overlay</find>
-      <find>3333</find>
       <find>butt</find>
       <find>-webkit-optimize-contrast</find>
       <find>image-rendering: crisp-edges;</find>
+      <find>3333</find>
+      <find>8888</find>
+      <find>place</find>
+      <find>cookie</find>
     </findStrings>
     <replaceStrings>
       <replace>-moz-crisp-edges</replace>
@@ -202,19 +194,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/myapp/public/splash.html" />
         <option value="$PROJECT_DIR$/myapp/public/javascripts/jquery.ui.touch-punch.min.js" />
         <option value="$PROJECT_DIR$/myapp/public/javascripts/mymessages.js" />
         <option value="$PROJECT_DIR$/myapp/cookieCredentials.js" />
         <option value="$PROJECT_DIR$/myapp/public/javascripts/myStats.js" />
         <option value="$PROJECT_DIR$/myapp/game.js" />
-        <option value="$PROJECT_DIR$/myapp/public/stylesheets/splash.css" />
-        <option value="$PROJECT_DIR$/myapp/public/javascripts/myGame.js" />
         <option value="$PROJECT_DIR$/myapp/public/javascripts/mySplash.js" />
-        <option value="$PROJECT_DIR$/myapp/public/game.html" />
         <option value="$PROJECT_DIR$/myapp/app.js" />
-        <option value="$PROJECT_DIR$/myapp/views/splash.ejs" />
+        <option value="$PROJECT_DIR$/myapp/public/javascripts/myGame.js" />
+        <option value="$PROJECT_DIR$/myapp/public/splash.html" />
         <option value="$PROJECT_DIR$/myapp/public/stylesheets/game.css" />
+        <option value="$PROJECT_DIR$/myapp/public/stylesheets/splash.css" />
+        <option value="$PROJECT_DIR$/myapp/public/game.html" />
+        <option value="$PROJECT_DIR$/myapp/views/splash.ejs" />
         <option value="$PROJECT_DIR$/myapp/public/stylesheets/style.css" />
       </list>
     </option>
@@ -326,7 +318,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/zohar/WebAppTest/Setup/myapp/views/splash.ejs" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544785415595" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544802284579" />
     <property name="jsx.switch.disabled" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../myapp" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -368,7 +360,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84992000" />
+    <option name="totallyTimeSpent" value="87476000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -381,6 +373,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1061" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15031983" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -455,13 +448,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/myGame.txt" />
-    <entry file="file://$PROJECT_DIR$/myapp/public/splash.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myapp/cookieCredentials.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -476,13 +462,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/myStats.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/myStats.js" />
     <entry file="file://$PROJECT_DIR$/myapp/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -492,13 +472,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myapp/routes/users.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/public/stylesheets/splash.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="94" column="1" lean-forward="true" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myapp/myStats.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -517,13 +490,6 @@
     <entry file="file://$PROJECT_DIR$/myapp/routes/myroutes.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1098">
-          <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/jquery.ui.touch-punch.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -531,24 +497,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/views/splash.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
-          <caret line="46" column="57" lean-forward="true" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/mySplash.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/myGame.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="886">
-          <caret line="403" column="8" lean-forward="true" selection-start-line="403" selection-start-column="8" selection-end-line="403" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -561,22 +513,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myapp/public/stylesheets/game.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="91" column="18" lean-forward="true" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
+        <state relative-caret-position="165">
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/public/splash.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myapp/public/game.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="100" column="14" lean-forward="true" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="14" />
+        <state relative-caret-position="285">
+          <caret line="19" column="82" selection-start-line="19" selection-start-column="82" selection-end-line="19" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/public/stylesheets/splash.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/myGame.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="413" column="56" selection-start-line="413" selection-start-column="56" selection-end-line="413" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/views/splash.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="90" selection-start-line="19" selection-start-column="90" selection-end-line="19" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/myScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myapp/public/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        <state relative-caret-position="345">
+          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
         </state>
       </provider>
     </entry>

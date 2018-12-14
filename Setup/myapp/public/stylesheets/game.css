@@ -13,10 +13,18 @@ header {
     to {visibility: hidden;}
 }
 
-#quit {
+main {
+    padding-top: 100px;
+}
+
+#game_tracker {
     position: absolute;
-    top: 50px;
-    right: 50px;
+    margin: 20px;
+    font-size: 30px;
+}
+
+#quit {
+    float: right;
 
     background-color:red;
     -moz-border-radius:10px;
@@ -105,8 +113,11 @@ header {
 
     color: red;
 
-    animation-name: remove;
-    animation-delay: 5s;
+    opacity: 1;
+}
+
+#placeholder_hide {
+    opacity: 0;
 }
 
 .ready_waiting {
@@ -309,7 +320,7 @@ header {
     image-rendering: -moz-crisp-edges;         /* Firefox */
     image-rendering:   -o-crisp-edges;         /* Opera */
     image-rendering: pixelated;
-    
+
     background: url("../images/explosion.png") no-repeat center;
     background-size: 40px 40px;
 }
@@ -322,7 +333,7 @@ header {
     image-rendering: -moz-crisp-edges;         /* Firefox */
     image-rendering:   -o-crisp-edges;         /* Opera */
     image-rendering: pixelated;
-    
+
     background: url("../images/festive_ducky.png") no-repeat center;
     background-size: 45px 45px;
 }
@@ -335,7 +346,7 @@ header {
     image-rendering: -moz-crisp-edges;         /* Firefox */
     image-rendering:   -o-crisp-edges;         /* Opera */
     image-rendering: pixelated;
-    
+
     background: url("../images/f2.png") no-repeat;
     background-size: 48px 50px;
 
@@ -350,7 +361,7 @@ header {
     image-rendering: -moz-crisp-edges;         /* Firefox */
     image-rendering:   -o-crisp-edges;         /* Opera */
     image-rendering: pixelated;
-    
+
     background: url("../images/cross.png") no-repeat center;
     background-size: 45px 45px;
 }
@@ -363,7 +374,7 @@ header {
     image-rendering: -moz-crisp-edges;         /* Firefox */
     image-rendering:   -o-crisp-edges;         /* Opera */
     image-rendering: pixelated;
-    
+
     background: url("../images/water.png") top left;
     background-size: 50px 50px;
 
@@ -384,7 +395,7 @@ header {
     image-rendering: -moz-crisp-edges;         /* Firefox */
     image-rendering:   -o-crisp-edges;         /* Opera */
     image-rendering: pixelated;
-    
+
 
     background: url("../images/festive_ducky.png") no-repeat center;
     background-size: 45px 45px;
@@ -488,4 +499,15 @@ header {
 .rotate_-90{
     transform: rotate(-90deg);
     transform-origin: center;
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s linear;
+}
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
 }

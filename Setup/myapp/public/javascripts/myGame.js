@@ -228,7 +228,6 @@ function ClientGame(){
         placeholder.setAttribute("id", "placeholder");
         document.getElementById("player_board").appendChild(placeholder);
 
-
         // UI functionality
         $(document).ready(function(){
             let audioElement = document.createElement("audio");
@@ -297,7 +296,7 @@ function ClientGame(){
 }
 
 (function setup(){
-    let socket = new WebSocket("ws://localhost:3333");
+    let socket = new WebSocket("ws://localhost:4242");
     let game = new ClientGame();
     game.generateAll();
 
@@ -399,7 +398,6 @@ function ClientGame(){
       
     };
     socket.onopen = function(){
-
         var cookieArray = document.cookie.split(";");
         if (cookieArray[0] === ""){
             document.cookie = "visits=1";
@@ -412,6 +410,8 @@ function ClientGame(){
             document.cookie = "visits=" + nr;
             game.visits = nr;
         }
+
+        $("#game_tracker").html("Number of games started: " + game.visits);
     };
 
     socket.onclose = function(){

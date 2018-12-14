@@ -9,9 +9,20 @@
 <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 
 <body>
-    <main>
-        <a id="quit" onclick="showQuit()">Quit</a>
+    <div class="overlay" id="warning_overlay">
+        <div class="overlay_contents">
+            <h1 class="title">This resolution is not supported... :(</h1>
+        </div>
+    </div>
 
+    <h1 id="game_tracker" class="title"></h1>
+    <div id="options">
+        <img id="fullscreen" src="images/fullscreen.png" onclick="openFullscreen()">
+        <a id="quit" onclick="showQuit()">Quit</a>
+    </div>
+
+
+    <main>
         <div id="left">
             <div id="duckies" class="duckies_gamestate1">
                 <h1 class="title">Duckies</h1>
@@ -113,6 +124,7 @@
     </div>
 </body>
 
+    <script src = "javascripts/myScreen.js"></script>
     <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
     <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
     <script src="javascripts/jquery.ui.touch-punch.min.js"></script>

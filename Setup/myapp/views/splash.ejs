@@ -7,7 +7,19 @@
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 
 <body>
+    <div class="overlay" id="warning_overlay">
+        <div class="overlay_contents">
+            <h1 class="title">This resolution is not supported... :(</h1>
+        </div>
+    </div>
+
         <main>
+            <h1 id="banner_title" class="title">BattleDucks</h1>
+
+            <div id="options">
+                <img id="fullscreen" src="images/fullscreen.png" onclick="openFullscreen()">
+            </div>
+
             <div id="wrapper">
                 <div id="play">
                     <div id="button_container">
@@ -42,6 +54,7 @@
         </main>
     </body>
 
+    <script src = "javascripts/myScreen.js"></script>
     <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
     <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
     <script src="javascripts/jquery.ui.touch-punch.min.js"></script>
