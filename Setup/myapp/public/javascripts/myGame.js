@@ -32,9 +32,14 @@ function showOverlay(message){
     $("#overlay_title").html(message);
 }
 
+function showQuit() {
+    $("#quit_overlay").css({"display" : "block"});
+    $("#overlay_title").html("Are you sure you want to quit?")
+}
+
 // Hides overlay
 function hideOverlay(){
-    $("#overlay").css({"display" : "none"})
+    $(".overlay").css({"display" : "none"})
 }
 
 // Show opponent board
@@ -291,7 +296,7 @@ function ClientGame(){
 }
 
 (function setup(){
-    let socket = new WebSocket("ws://localhost:8888");
+    let socket = new WebSocket("ws://localhost:3333");
     let game = new ClientGame();
     game.generateAll();
 
@@ -336,7 +341,7 @@ function ClientGame(){
                             myMsg.data = used_tiles;
                             socket.send(JSON.stringify(myMsg));
                         } else {
-                            $("#placeholder").html("Hey, you forgot me!");
+                            $("#placeholder").html("Hey, you forgot some of us!");
                         }
                     }
                 });
@@ -393,10 +398,6 @@ function ClientGame(){
       
     };
     socket.onopen = function(){
-        //let messageToServer = Messagez.hello;
-        //socket.send(JSON.stringify(messageToServer));
-       // socket.send("hello");
-        //alert("this is sending"); OK
     };
 
     socket.onclose = function(){

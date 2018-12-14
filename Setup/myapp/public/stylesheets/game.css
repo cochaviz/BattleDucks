@@ -13,6 +13,35 @@ header {
     to {visibility: hidden;}
 }
 
+#quit {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+
+    background-color:red;
+    -moz-border-radius:10px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+    border:1px solid black;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:26px;
+    font-weight:bold;
+    padding:18px 50px;
+    text-decoration:none;
+    text-shadow:0 1px 0 #2f6627;
+
+    margin-bottom: 25px;
+}
+
+#quit:hover {
+    background-color:darkred;
+}
+#quit:active {
+    top:51px;
+}
+
 #header-img {
     border: 3px solid black;
 }
@@ -25,6 +54,9 @@ header {
 #statistics {
     visibility: hidden;
     display: none;
+    margin: 20px 15px;
+
+    border: dashed 2px black
 }
 
 #duckies_border {
@@ -37,10 +69,11 @@ header {
 #duckies_container {
     display: grid;
     width: 435px;
-    height: 500px;
+    height: 490px;
 
     margin: 20px auto auto;
     padding-left: 65px;
+    padding-top: 10px;
 
     grid-template-columns: repeat(4, 50px);
 
@@ -48,12 +81,12 @@ header {
     grid-column-gap: 30px;
 
     image-rendering: -moz-crisp-edges;
-    background: url("../images/grass.png") top left;
+    background: url("../images/ice.png") top left;
     background-size: 50px 50px;
     border: 1px solid black;
 }
 
-#button_container{
+.button_container{
     width: 300px;
     margin: 100px auto 20px;
     text-align: center;
@@ -64,7 +97,7 @@ header {
     margin-right: 40px;
     margin-top: 30px;
 
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
 
     color: red;
@@ -82,7 +115,7 @@ header {
     display:inline-block;
     cursor:pointer;
     color:#ffffff;
-    font-size:16px;
+    font-size:20px;
     padding:15px 25px;
     text-decoration:none;
     text-shadow:0 1px 0 #2f6627;
@@ -100,7 +133,7 @@ header {
     display:inline-block;
     cursor:pointer;
     color:#ffffff;
-    font-size:16px;
+    font-size:23px;
     font-weight:bold;
     padding:15px 39px;
     text-decoration:none;
@@ -118,15 +151,15 @@ header {
 }
 
 #new_game {
-    background-color:#3464db;
+    background-color:red;
     -moz-border-radius:10px;
     -webkit-border-radius:8px;
     border-radius:8px;
-    border:1px solid #152ab0;
+    border:1px solid black;
     display:inline-block;
     cursor:pointer;
     color:#ffffff;
-    font-size:20px;
+    font-size:26px;
     font-weight:bold;
     padding:18px 50px;
     text-decoration:none;
@@ -136,7 +169,7 @@ header {
 }
 
 #new_game:hover {
-    background-color:#254980;
+    background-color:darkred;
 }
 
 #new_game:active {
@@ -145,15 +178,15 @@ header {
 }
 
 #main_menu {
-    background-color:#3464db;
+    background-color: darkgrey;
     -moz-border-radius:10px;
     -webkit-border-radius:8px;
     border-radius:8px;
-    border:1px solid #152ab0;
+    border:1px solid black;
     display:inline-block;
     cursor:pointer;
     color:#ffffff;
-    font-size:15px;
+    font-size:18px;
     font-weight:bold;
     padding:13px 30px;
     text-decoration:none;
@@ -161,9 +194,35 @@ header {
 }
 
 #main_menu:hover {
-    background-color:#254980;
+    background-color: grey;
 }
 #main_menu:active {
+    position:relative;
+    top:1px;
+}
+
+#stay_button {
+    background-color:red;
+    -moz-border-radius:10px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+    border:1px solid black;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:26px;
+    font-weight:bold;
+    padding:18px 50px;
+    text-decoration:none;
+    text-shadow:0 1px 0 #2f6627;
+}
+
+
+
+#stay_button:hover {
+    background-color:darkred;
+}
+#stay_button:active {
     position:relative;
     top:1px;
 }
@@ -196,6 +255,11 @@ header {
     height: 50px;
 }
 
+.tile_0:hover {
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
 .tile_1 {
     display: block;
     width: 50px;
@@ -222,8 +286,10 @@ header {
     height: 50px;
 
     image-rendering:  -moz-crisp-edges;
-    background: url("../images/f.png") no-repeat center;
-    background-size: 55px 55px;
+    background: url("../images/f2.png") no-repeat;
+    background-size: 48px 50px;
+
+    background-position: 2px -2px;
 }
 
 .tile_4 {
@@ -255,7 +321,7 @@ header {
 }
 
 .ship_cell {
-    display: block; 
+    display: block;
     width: 50px;
     height: 50px;
 

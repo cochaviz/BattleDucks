@@ -1,7 +1,7 @@
 @import "style.css";
 
 #wrapper {
-    width: 650px;
+    width: 750px;
     height: 400px;
 
     padding: 100px;
@@ -16,7 +16,17 @@
 }
 
 #statistics {
-    margin-top: 120px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+
+    margin-top: 150px;
+    float: right;
+
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    border: 2px dashed black;
 }
 
 #play {
@@ -25,9 +35,11 @@
     text-align: center
 }
 
-#button\ container{
-    width: 100%;
+#button_container{
+    width: 80%;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #play_button {
@@ -37,7 +49,7 @@
     -moz-border-radius:10px;
     -webkit-border-radius:8px;
     border-radius:8px;
-    border:1px solid darkred;
+    border:1px solid black;
     display:inline-block;
     cursor:pointer;
     color:#ffffff;
@@ -67,7 +79,7 @@
     display:inline-block;
     cursor:pointer;
     color:#ffffff;
-    font-size:15px;
+    font-size:22px;
     font-weight:bold;
     padding:15px 39px;
     text-decoration:none;
@@ -82,6 +94,12 @@
     top:1px;
 }
 
-#statistics {
-    float: right;
+.overlay li{
+    list-style-type: upper-roman;
+    padding-bottom: 10px;
+}
+
+#overlay_title {
+    margin-bottom: 55px;
+    text-decoration: underline;
 }

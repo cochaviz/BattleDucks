@@ -4,12 +4,13 @@
     </head>
 
     <link rel="stylesheet" type="text/css" href="stylesheets/splash.css">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 
-    <body>
+<body>
         <main>
             <div id="wrapper">
                 <div id="play">
-                    <div id="button container">
+                    <div id="button_container">
                         <a id="play_button" onclick="window.location.href='/game'">Play</a>
                         <a id="help_button" onclick="showOverlay('Welcome To BattleDucks')">Help</a>
                     </div>
@@ -20,16 +21,16 @@
                 <div id="statistics">
                     <ul>
                         <li> Games started : <%= InitializedGames-1 %></li>
-                        <li> Left games: <%= AbortedGames %></li>
-                        <li> Random Stat: <%= random %></li>
+                        <li> Games aborted: <%= AbortedGames %></li>
+                        <li> Online players: <%= PlayersJoined + 1%></li>
                     </ul>
                 </div>
             </div>
 
-            <div id="overlay" onclick="hideOverlay()">
-                <h1 id="overlay_title" class="title"></h1>
+            <div class="overlay" onclick="hideOverlay()">
+                <div class="overlay_contents">
+                    <h1 id="overlay_title" class="title"></h1>
 
-                <div id="overlay_contents">
                     <ul>
                         <li>Set up your ducks by dragging them to your board, and rotate them by clicking</li>
                         <li>As soon as a player has joined the game, the ready button will be clickable and you can start your game</li>
@@ -44,6 +45,5 @@
     <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
     <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
     <script src="jquery.ui.touch-punch.min.js"></script>
-    <script src="javascripts/mySplash.js"></script>
-
+    <script src="javascripts/myGame.js"></script>
 </html>

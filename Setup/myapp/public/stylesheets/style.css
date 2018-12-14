@@ -13,7 +13,8 @@ html {
 }
 
 body {
-    font: 14px Helvetica, sans-serif;
+    font-family: 'VT323', monospace;
+    font-size: 14px;
 }
 
 main {
@@ -25,13 +26,13 @@ main {
 
 .title {
     text-align: center;
+    font-size: 40px;
 }
 
 #statistics {
     margin-top: 30px;
-
-    font-weight: bold;
-    font-size: 18px;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 #statistics li {
@@ -39,7 +40,15 @@ main {
     padding-bottom: 10px;
 }
 
-#overlay {
+#statistics li:last-of-type {
+    padding-bottom: 0px;
+}
+
+li:last-of-type {
+    padding-bottom: 0px;
+}
+
+.overlay {
     position: fixed;
     display: none;
     width: 100%;
@@ -53,7 +62,7 @@ main {
     cursor: pointer;
 }
 
-#overlay_contents {
+.overlay_contents {
     width: 700px;
     font-size: 25px;
     background-color: var(--overlay-color);

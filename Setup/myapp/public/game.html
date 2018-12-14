@@ -6,9 +6,12 @@
 </head>
 
 <link rel="stylesheet" type="text/css" href="stylesheets/game.css">
+<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 
 <body>
     <main>
+        <a id="quit" onclick="showQuit()">Quit</a>
+
         <div id="left">
             <div id="duckies" class="duckies_gamestate1">
                 <h1 class="title">Duckies</h1>
@@ -87,13 +90,24 @@
 
     </main>
 
-    <div id="overlay">
-        <div id="overlay_contents">
-            <h1 id="overlay_title" class="title">Congrats, you won without actually winning!</h1>
+    <div id="overlay" class="overlay">
+        <div class="overlay_contents">
+            <h1 id="overlay_title" class="title">Congrats, you found the developer console!</h1>
 
-            <div id="button_container">
+            <div class="button_container">
                 <a onclick="window.location.href='/game'" id="new_game">New Game</a>
                 <a onclick="window.location.href='/'" id="main_menu">Main Menu</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="quit_overlay" class="overlay">
+        <div class="overlay_contents">
+            <h1 id="quit_overlay_title" class="title">Congrats, you found the developer console!</h1>
+
+            <div class="button_container">
+                <a onclick="hideOverlay()" id="stay_button">NO!</a>
+                <a onclick="window.location.href='/'" id="leave_button">Yes...</a>
             </div>
         </div>
     </div>

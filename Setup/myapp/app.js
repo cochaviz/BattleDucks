@@ -12,7 +12,7 @@ var app = express();
 var cookies = require("cookie-parser");//for, u guessed, cookies 
 var credentials = require("./cookieCredentials");
 app.use(cookies(credentials.cookieSecret));
-var myCookies = {};
+var myCookies = {};//cookieid-how many visits
 cookieId = 0;
 
 app.use(express.static(__dirname + "/public"));
@@ -27,7 +27,6 @@ app.set("view engine", "ejs");
 app.get ('/', function (req, res) {
   //res.render("splash.ejs", {InitializedGames: stats.newGames, AbortedGames: stats.abortedGames, random: "42"});modu
   // res.cookie("visits", "0");
-  console.log("helooo bello " + JSON.stringify(req.cookies));
   if (req.cookies.id){//
     myCookies[req.cookies.id] ++;// increment the number of vizits for this user
     res.cookie("id", req.cookies.id);
@@ -41,7 +40,7 @@ app.get ('/', function (req, res) {
     console.log( cookieId-1 + "    visitTimes:" + myCookies[cookieId-1]);
   }
  // console.log("COOKIE: " + req.cookies);
-  res.render("splash", {InitializedGames: stats.newGames, AbortedGames: stats.abortedGames, random: "42"});
+  res.render("splash", {InitializedGames: stats.newGames, AbortedGames: stats.abortedGames, PlayersJoined: stats.playersJoined});
 });
 
 //http.createServer(app).listen(port);
@@ -55,6 +54,8 @@ var currentGame = new Game(stats.newGames ++);//should i add a param ?
 
 
 wss.on ("connection", function connection(ws){
+  stats.playersJoined++;
+
   //for every new connection:
   let currentConnection = ws;//idk ws type
   currentConnection.id = connectionId ++;// unique id for each new connection 
@@ -148,11 +149,13 @@ wss.on ("connection", function connection(ws){
     //}
   });
   currentConnection.on("close", function(code){
+    stats.playersJoined--;
     console.log(currentConnection.id + " disconnected from game " + websockets[currentConnection.id]);
     let clientGame = websockets[currentConnection.id];
     stats.abortedGames ++;
 
     let msg = messages.aborted;
+
     if (clientGame.getOtherPlayer(currentConnection) !== -1)
       clientGame.getOtherPlayer(currentConnection).send(JSON.stringify(msg));
 

@@ -1,3 +1,3 @@
 module.exports = {
-    cookieSecret: "SecretStringMaybeForEncr"
+    cookieSecret: "BALLLIIEEEEEPOFFERTJEEEES"
 };
