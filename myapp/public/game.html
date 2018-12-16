@@ -5,12 +5,21 @@
     <title>BattleDucks</title>
 </head>
 
-<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/game.css">
+<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 
 <body>
-    <!--<header>-->
-        <!--<img id="header-img" src="images/titlegame.png"/>-->
-    <!--</header>-->
+    <div class="overlay" id="warning_overlay">
+        <div class="overlay_contents">
+            <h1 class="title">This resolution is not supported... :(</h1>
+        </div>
+    </div>
+
+    <h1 id="game_tracker" class="title"></h1>
+    <div id="options">
+        <img class="openfullscreen" id="fullscreen" src="images/fullscreen.png">
+        <a id="quit" onclick="showQuit()">Quit</a>
+    </div>
 
 
     <main>
@@ -19,10 +28,10 @@
                 <h1 class="title">Duckies</h1>
 
                 <div id="duckies_container">
-                    <div id="ducky0" class="ship">
-                        <div class="ship_cell"></div>
-                        <div class="ship_cell"></div>
-                    </div>
+                    <!--<div id="ducky0" class="ship">-->
+                        <!--<div class="ship_cell"></div>-->
+                        <!--<div class="ship_cell"></div>-->
+                    <!--</div>-->
                     
                     <div id="ducky1" class="ship">
                         <div class="ship_cell"></div>
@@ -55,11 +64,11 @@
                         <div class="ship_cell"></div>
                     </div>
 
-                    <div id="ducky6" class="ship">
-                        <div class="ship_cell"></div>
-                        <div class="ship_cell"></div>
-                        <div class="ship_cell"></div>
-                    </div>
+                    <!--<div id="ducky6" class="ship">-->
+                        <!--<div class="ship_cell"></div>-->
+                        <!--<div class="ship_cell"></div>-->
+                        <!--<div class="ship_cell"></div>-->
+                    <!--</div>-->
 
                     <div id="ducky7" class="ship">
                         <div class="ship_cell"></div>
@@ -77,9 +86,8 @@
                 </div>
 
                 <div id="ready">
-                    <a id="player_ready">Ready</a>
+                    <a id="player_ready" class="ready_waiting">Waiting for player to join...</a>
                 </div>
-                <input type="checkbox" id="forceReady" placeholder="forceReady?">
             </div>
 
             <div id="opponent_board" class="board">
@@ -89,23 +97,37 @@
 
         <div id="player_board" class="board">
             <h1 class="title">You</h1>
-            <div id="placeholder"></div>
         </div>
 
-        
-        <div id="results"></div>
     </main>
 
-    <section id="endgame_overlay">
-        <button id="new_game">New Game</button>
-        <button id="main_menu">Main Menu</button>
-    </section>
+    <div id="overlay" class="overlay">
+        <div class="overlay_contents">
+            <h1 id="overlay_title" class="title">Congrats, you found the developer console!</h1>
+
+            <div class="button_container">
+                <a onclick="window.location.href='/game'" id="new_game">New Game</a>
+                <a onclick="window.location.href='/'" id="main_menu">Main Menu</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="quit_overlay" class="overlay">
+        <div class="overlay_contents">
+            <h1 id="quit_overlay_title" class="title">Do you really want to quit the game?</h1>
+
+            <div class="button_container" id="quit_button_container">
+                <a onclick="hideOverlay()" id="stay_button">NO!</a>
+                <a onclick="window.location.href='/'" id="leave_button">Yes...</a>
+            </div>
+        </div>
+    </div>
 </body>
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="javascripts/game.js"></script>
-    <script src="javascripts/myStats.js"></script>
+
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+    <script src="javascripts/jquery.ui.touch-punch.min.js"></script>
+    <script src ="javascripts/myScreen.js"></script>
     <script src="javascripts/mymessages.js"></script>
     <script src="javascripts/myGame.js"></script>
     
