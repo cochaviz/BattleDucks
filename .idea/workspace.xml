@@ -2,163 +2,384 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34f57b22-c704-4059-b73d-fe2cb7857514" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Setup.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BattleDucks.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/public/game.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/public/game.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/public/javascripts/myGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/public/javascripts/myGame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/public/javascripts/myScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/public/javascripts/myScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/public/stylesheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/views/splash.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/views/splash.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/.bin/cleancss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/@types/babel-types/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/@types/babel-types/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/@types/babel-types/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/@types/babel-types/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/@types/babel-types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/@types/babel-types/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/@types/babel-types/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/@types/babel-types/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/@types/babylon/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/@types/babylon/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/@types/babylon/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/@types/babylon/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/@types/babylon/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/@types/babylon/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/@types/babylon/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/@types/babylon/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/amdefine/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/amdefine/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/amdefine/amdefine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/amdefine/intercept.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/amdefine/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/History.md" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/clean-css/History.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/clean-css/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/clean-css/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/bin/cleancss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/clean.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/clean.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/colors/hex-name-shortener.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/colors/hsl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/colors/rgb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/imports/inliner.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/properties/break-up.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/properties/can-override.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/properties/clone.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/properties/compactable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/properties/every-combination.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/properties/has-inherit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/properties/invalid-property-error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/properties/optimizer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/properties/override-compactor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/properties/populate-components.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/properties/remove-unused.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/properties/restore-from-optimizing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/properties/restore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/properties/shorthand-compactor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/properties/validator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/properties/vendor-prefixes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/properties/wrap-for-optimizing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/selectors/advanced.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/selectors/clean-up.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/selectors/extractor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/selectors/is-special.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/selectors/merge-adjacent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/selectors/merge-media-queries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/selectors/merge-non-adjacent-by-body.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/selectors/merge-non-adjacent-by-selector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/selectors/reduce-non-adjacent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/selectors/remove-duplicate-media-queries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/selectors/remove-duplicates.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/selectors/reorderable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/selectors/restructure.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/selectors/simple.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/source-maps/track.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/stringifier/helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/stringifier/one-time.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/stringifier/simple.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/stringifier/source-maps.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/text/comments-processor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/text/escape-store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/text/expressions-processor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/text/free-text-processor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/text/urls-processor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/tokenizer/extract-properties.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/tokenizer/extract-selectors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/tokenizer/tokenize.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/tokenizer/tokenize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/urls/rebase.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/urls/reduce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/urls/rewrite.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/utils/compatibility.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/utils/input-source-map-tracker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/utils/object.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/utils/quote-scanner.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/utils/source-reader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/utils/source-tracker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/utils/split.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/clean-css/lib/utils/split.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/clean-css/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/clean-css/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/commander/History.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/commander/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/commander/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/commander/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/commander/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/cookie-parser/HISTORY.md" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/cookie-parser/HISTORY.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/cookie-parser/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/cookie-parser/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/cookie-parser/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/cookie-parser/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/cookie-parser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/cookie-parser/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/bower.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/build/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/build/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/client/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/client/core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/client/core.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/client/core.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/client/core.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/client/core.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/client/library.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/client/library.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/client/library.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/client/library.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/client/library.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/client/library.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/client/shim.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/client/shim.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/client/shim.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/client/shim.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/client/shim.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/client/shim.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/es6/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/es6/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/es6/regexp.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/es6/regexp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/fn/regexp/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/fn/regexp/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/library/es6/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/library/es6/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/library/es6/regexp.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/library/es6/regexp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/library/fn/regexp/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/library/fn/regexp/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/library/modules/_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/library/modules/_core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/library/modules/_fix-re-wks.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/library/modules/_fix-re-wks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/library/modules/_shared.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/library/modules/_shared.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/library/modules/es6.weak-map.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/library/modules/es6.weak-map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/library/modules/es7.string.pad-end.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/library/modules/es7.string.pad-end.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/library/modules/es7.string.pad-start.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/library/modules/es7.string.pad-start.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/library/shim.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/library/shim.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/_core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/_fix-re-wks.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/_fix-re-wks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/_redefine.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/_redefine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/_shared.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/_shared.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/es6.regexp.match.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/es6.regexp.match.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/es6.regexp.replace.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/es6.regexp.replace.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/es6.regexp.search.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/es6.regexp.search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/es6.regexp.split.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/es6.regexp.split.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/es6.weak-map.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/es6.weak-map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/es7.string.pad-end.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/es7.string.pad-end.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/es7.string.pad-start.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/modules/es7.string.pad-start.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/core-js/shim.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/core-js/shim.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/graceful-readlink/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/graceful-readlink/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/graceful-readlink/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/graceful-readlink/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/graceful-readlink/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/graceful-readlink/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-code-gen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-code-gen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-code-gen/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-code-gen/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-filters/lib/handle-filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-filters/lib/handle-filters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-filters/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-filters/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-filters/test/__snapshots__/index.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-filters/test/__snapshots__/index.test.js.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-filters/test/cases/filters.include.input.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-filters/test/cases/filters.include.input.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-filters/test/index.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-filters/test/index.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-filters/test/update-test-cases.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-filters/test/update-test-cases.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-lexer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-lexer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-lexer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-lexer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-lexer/test/__snapshots__/index.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-lexer/test/__snapshots__/index.test.js.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-lexer/test/cases/classes.pug" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-lexer/test/cases/classes.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-lexer/test/cases/filters.include.pug" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-lexer/test/cases/filters.include.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-lexer/test/index.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-lexer/test/index.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-linker/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-linker/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-linker/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-linker/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-linker/test/__snapshots__/index.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-linker/test/__snapshots__/index.test.js.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/__snapshots__/index.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/__snapshots__/index.test.js.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/attr-es2015.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/attr-es2015.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/attrs-data.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/attrs-data.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/attrs.js.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/attrs.js.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/attrs.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/attrs.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/attrs.unescaped.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/attrs.unescaped.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/basic.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/basic.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/blanks.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/blanks.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/block-code.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/block-code.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/block-expansion.shorthands.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/block-expansion.shorthands.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/block-expansion.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/block-expansion.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/blockquote.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/blockquote.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/blocks-in-blocks.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/blocks-in-blocks.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/blocks-in-if.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/blocks-in-if.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/case-blocks.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/case-blocks.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/case.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/case.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/classes-empty.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/classes-empty.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/classes.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/classes.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/code.conditionals.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/code.conditionals.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/code.escape.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/code.escape.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/code.iteration.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/code.iteration.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/code.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/code.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/comments-in-case.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/comments-in-case.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/comments.source.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/comments.source.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/comments.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/comments.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/doctype.custom.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/doctype.custom.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/doctype.default.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/doctype.default.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/doctype.keyword.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/doctype.keyword.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/each.else.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/each.else.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/escape-chars.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/escape-chars.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/escape-test.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/escape-test.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/escaping-class-attribute.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/escaping-class-attribute.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filter-in-include.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filter-in-include.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filters-empty.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filters-empty.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filters.coffeescript.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filters.coffeescript.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filters.custom.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filters.custom.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filters.include.custom.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filters.include.custom.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filters.include.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filters.include.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filters.inline.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filters.inline.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filters.less.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filters.less.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filters.markdown.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filters.markdown.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filters.nested.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filters.nested.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filters.stylus.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/filters.stylus.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/html.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/html.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/html5.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/html5.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/include-extends-from-root.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/include-extends-from-root.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/include-extends-of-common-template.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/include-extends-of-common-template.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/include-extends-relative.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/include-extends-relative.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/include-only-text-body.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/include-only-text-body.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/include-only-text.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/include-only-text.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/include-with-text-head.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/include-with-text-head.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/include-with-text.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/include-with-text.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/include.script.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/include.script.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/include.yield.nested.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/include.yield.nested.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/includes-with-ext-js.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/includes-with-ext-js.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/includes.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/includes.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inheritance.alert-dialog.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inheritance.alert-dialog.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inheritance.defaults.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inheritance.defaults.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inheritance.extend.include.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inheritance.extend.include.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inheritance.extend.mixins.block.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inheritance.extend.mixins.block.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inheritance.extend.mixins.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inheritance.extend.mixins.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inheritance.extend.recursive.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inheritance.extend.recursive.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inheritance.extend.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inheritance.extend.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inheritance.extend.whitespace.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inheritance.extend.whitespace.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inheritance.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inheritance.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inline-block-comment.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inline-block-comment.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inline-tag.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/inline-tag.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/intepolated-elements.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/intepolated-elements.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/interpolated-mixin.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/interpolated-mixin.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/interpolation.escape.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/interpolation.escape.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/layout.append.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/layout.append.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/layout.append.without-block.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/layout.append.without-block.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/layout.multi.append.prepend.block.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/layout.multi.append.prepend.block.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/layout.prepend.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/layout.prepend.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/layout.prepend.without-block.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/layout.prepend.without-block.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixin-at-end-of-file.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixin-at-end-of-file.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixin-block-with-space.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixin-block-with-space.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixin-hoist.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixin-hoist.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixin-via-include.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixin-via-include.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixin.attrs.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixin.attrs.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixin.block-tag-behaviour.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixin.block-tag-behaviour.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixin.blocks.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixin.blocks.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixin.merge.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixin.merge.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixins-unused.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixins-unused.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixins.rest-args.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixins.rest-args.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixins.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/mixins.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/namespaces.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/namespaces.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/nesting.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/nesting.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/pipeless-comments.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/pipeless-comments.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/pipeless-filters.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/pipeless-filters.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/pipeless-tag.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/pipeless-tag.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/pre.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/pre.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/quotes.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/quotes.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/regression.1794.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/regression.1794.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/regression.784.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/regression.784.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/script.whitespace.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/script.whitespace.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/scripts.non-js.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/scripts.non-js.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/scripts.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/scripts.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/self-closing-html.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/self-closing-html.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/single-period.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/single-period.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/source.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/source.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/styles.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/styles.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/tag-blocks.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/tag-blocks.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/tag.interpolation.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/tag.interpolation.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/tags.self-closing.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/tags.self-closing.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/template.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/template.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/text-block.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/text-block.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/text.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/text.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/utf8bom.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/utf8bom.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/vars.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/vars.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/while.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/while.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/xml.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/xml.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/yield-before-conditional-head.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/yield-before-conditional-head.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/yield-before-conditional.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/yield-before-conditional.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/yield-head.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/yield-head.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/yield-title-head.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/yield-title-head.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/yield-title.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/yield-title.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/yield.tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug-parser/test/cases/yield.tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/lib/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/cases-es2015/attr.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/cases-es2015/attr.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/cases/filters.coffeescript.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/cases/filters.coffeescript.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/cases/filters.include.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/cases/filters.include.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/cases/filters.nested.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/cases/filters.nested.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/cases/styles.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/cases/styles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/cases/text.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/cases/text.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output-es2015/attr.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output-es2015/attr.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output-es2015/attr.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output-es2015/attr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/attrs-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/attrs-data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/attrs.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/attrs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/attrs.js.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/attrs.js.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/classes-empty.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/classes-empty.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/code.iteration.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/code.iteration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/code.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/filters-empty.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/filters-empty.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/filters.coffeescript.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/filters.coffeescript.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/filters.coffeescript.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/filters.coffeescript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/filters.include.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/filters.include.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/filters.include.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/filters.include.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/filters.nested.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/filters.nested.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/filters.nested.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/filters.nested.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/html5.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/html5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/interpolated-mixin.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/interpolated-mixin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/mixin.attrs.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/mixin.attrs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/mixin.blocks.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/mixin.blocks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/mixin.merge.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/mixin.merge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/regression.1794.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/regression.1794.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/source.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/source.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/styles.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/styles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/tag.interpolation.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/tag.interpolation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/text.html" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/text.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/vars.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/output/vars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/pug/test/pug.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/pug/test/pug.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/resolve/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/resolve/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/resolve/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/resolve/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/resolve/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/resolve/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/resolve/lib/async.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/resolve/lib/async.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/resolve/lib/core.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/resolve/lib/core.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/resolve/lib/node-modules-paths.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/resolve/lib/node-modules-paths.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/resolve/lib/sync.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/resolve/lib/sync.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/resolve/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/resolve/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/resolve/readme.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/resolve/readme.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/resolve/test/faulty_basedir.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/resolve/test/faulty_basedir.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/resolve/test/node-modules-paths.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/resolve/test/node-modules-paths.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/resolve/test/node_path.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/resolve/test/node_path.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/resolve/test/resolver.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/resolve/test/resolver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/resolve/test/resolver_sync.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/resolve/test/resolver_sync.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/resolve/test/symlinks.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/resolve/test/symlinks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/source-map/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/build/assert-shim.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/build/mini-require.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/build/prefix-source-map.jsm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/build/prefix-utils.jsm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/build/suffix-browser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/build/suffix-source-map.jsm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/build/suffix-utils.jsm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/build/test-prefix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/build/test-suffix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/lib/source-map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/lib/source-map/array-set.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/lib/source-map/base64-vlq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/lib/source-map/base64.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/lib/source-map/binary-search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/lib/source-map/mapping-list.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/lib/source-map/quick-sort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/lib/source-map/source-map-consumer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/lib/source-map/source-map-generator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/lib/source-map/source-node.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/lib/source-map/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/source-map/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/source-map/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/ws/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/ws/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/ws/lib/buffer-util.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/ws/lib/buffer-util.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/ws/lib/permessage-deflate.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/ws/lib/permessage-deflate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/ws/lib/receiver.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/ws/lib/receiver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/ws/lib/sender.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/ws/lib/sender.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/ws/lib/websocket-server.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/ws/lib/websocket-server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/ws/lib/websocket.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/ws/lib/websocket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/node_modules/ws/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/node_modules/ws/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/routes/myroutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/routes/myroutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ejs/Jakefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ejs/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ejs/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ejs/ejs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ejs/ejs.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ejs/lib/ejs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ejs/lib/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ejs/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1586278266">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.26" value="1" />
-          <entry key="project.open.time.28" value="1" />
-          <entry key="project.open.time.29" value="1" />
-          <entry key="project.open.time.31" value="1" />
-          <entry key="project.open.time.33" value="1" />
-          <entry key="project.open.time.51" value="1" />
-          <entry key="project.open.time.53" value="1" />
-          <entry key="project.opened" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="css" value="7" />
-          <entry key="ejs" value="2" />
-          <entry key="html" value="8" />
-          <entry key="js" value="33" />
-          <entry key="txt" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="7" />
-          <entry key="EJS" value="2" />
-          <entry key="HTML" value="8" />
-          <entry key="JavaScript" value="33" />
-          <entry key="PLAIN_TEXT" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="css" value="1875" />
-          <entry key="ejs" value="1071" />
-          <entry key="html" value="941" />
-          <entry key="js" value="5228" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSS" value="1875" />
-          <entry key="EJS" value="1071" />
-          <entry key="HTML" value="945" />
-          <entry key="JavaScript" value="5224" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/myapp/public/stylesheets/game.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6630">
-              <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myapp/public/game.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="129" column="4" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myapp/game.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myapp/public/stylesheets/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1590">
-              <caret line="106" column="1" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myapp/public/stylesheets/splash.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/myGame.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6195">
-              <caret line="413" column="56" selection-start-line="413" selection-start-column="56" selection-end-line="413" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myapp/myStats.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myapp/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myapp/views/splash.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/myScreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -170,7 +391,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>board</find>
       <find>grid_size</find>
       <find>updatePla</find>
       <find>title</find>
@@ -200,6 +420,7 @@
       <find>cookie</find>
       <find>8080</find>
       <find>ngrok</find>
+      <find>80</find>
     </findStrings>
     <replaceStrings>
       <replace>-moz-crisp-edges</replace>
@@ -207,48 +428,15 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/myapp/public/javascripts/jquery.ui.touch-punch.min.js" />
-        <option value="$PROJECT_DIR$/myapp/public/javascripts/mymessages.js" />
-        <option value="$PROJECT_DIR$/myapp/cookieCredentials.js" />
-        <option value="$PROJECT_DIR$/myapp/public/javascripts/myStats.js" />
-        <option value="$PROJECT_DIR$/myapp/game.js" />
-        <option value="$PROJECT_DIR$/myapp/public/javascripts/mySplash.js" />
-        <option value="$PROJECT_DIR$/myapp/public/javascripts/myGame.js" />
-        <option value="$PROJECT_DIR$/myapp/public/splash.html" />
-        <option value="$PROJECT_DIR$/myapp/public/stylesheets/game.css" />
-        <option value="$PROJECT_DIR$/myapp/public/stylesheets/splash.css" />
-        <option value="$PROJECT_DIR$/myapp/public/stylesheets/style.css" />
-        <option value="$PROJECT_DIR$/myapp/public/game.html" />
-        <option value="$PROJECT_DIR$/myapp/views/splash.ejs" />
-        <option value="$PROJECT_DIR$/myapp/public/javascripts/myScreen.js" />
-        <option value="$PROJECT_DIR$/myapp/app.js" />
-      </list>
-    </option>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/myapp/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/myapp/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/ejs/package.json" />
-    </packageJsonPaths>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="width" value="1920" />
-    <option name="height" value="1078" />
-  </component>
+  <component name="ProjectId" id="1YDfHp3s5WNrfc01cuYYqk2s2mc" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
@@ -270,87 +458,39 @@
     </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Setup" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Setup" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Setup" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Setup" type="462c0819:PsiDirectoryNode" />
-              <item name="myapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Setup" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Setup" type="462c0819:PsiDirectoryNode" />
-              <item name="myapp" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Setup" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Setup" type="462c0819:PsiDirectoryNode" />
-              <item name="myapp" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Setup" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Setup" type="462c0819:PsiDirectoryNode" />
-              <item name="myapp" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Setup" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Setup" type="462c0819:PsiDirectoryNode" />
-              <item name="myapp" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Setup" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Setup" type="462c0819:PsiDirectoryNode" />
-              <item name="myapp" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/zohar/WebAppTest/Setup/myapp/views/splash.ejs" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544961386204" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553966935506" />
+    <property name="javascript.nodejs.core.library.configured.version" value="11.11.0" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../myapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="RunManager">
+    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" application-parameters="6969" nameIsGenerated="true" path-to-js-file="myapp/app.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <item itemvalue="Node.js.app.js" />
       </list>
-    </option>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -370,223 +510,54 @@
       <workItem from="1544722454940" duration="18726000" />
       <workItem from="1544880068923" duration="2866000" />
       <workItem from="1544960978936" duration="728000" />
+      <workItem from="1544973810687" duration="559000" />
+      <workItem from="1545034941878" duration="15219000" />
+      <workItem from="1547127781413" duration="52000" />
+      <workItem from="1553936502336" duration="3961000" />
+      <workItem from="1582482006655" duration="969000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95674000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1078" extended-state="0" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15351813" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32987553" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.17012449" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15031983" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32987553" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.18057021" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/myapp/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-465">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/myGame.txt" />
-    <entry file="file://$PROJECT_DIR$/myapp/cookieCredentials.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="45" lean-forward="true" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/mymessages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="807">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/myStats.js" />
-    <entry file="file://$PROJECT_DIR$/myapp/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/node_modules/ws/lib/websocket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
-          <caret line="801" column="14" selection-start-line="801" selection-start-column="14" selection-end-line="801" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/routes/myroutes.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/jquery.ui.touch-punch.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/mySplash.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/public/splash.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/myGame.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6195">
-          <caret line="413" column="56" selection-start-line="413" selection-start-column="56" selection-end-line="413" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/myStats.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/views/splash.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/public/javascripts/myScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1590">
-          <caret line="106" column="1" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/public/stylesheets/splash.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/public/game.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="129" column="4" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/public/stylesheets/game.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6630">
-          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="416" y="167" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582482384359">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="416" y="167" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582482384359" />
+    <state width="1876" height="271" key="GridCell.Tab.0.bottom" timestamp="1582531336422">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1582531336422" />
+    <state width="1876" height="271" key="GridCell.Tab.0.center" timestamp="1582531336418">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="271" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1582531336418" />
+    <state width="1876" height="271" key="GridCell.Tab.0.left" timestamp="1582531336417">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="271" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1582531336417" />
+    <state width="1876" height="271" key="GridCell.Tab.0.right" timestamp="1582531336420">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="271" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1582531336420" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/myapp/bin/www</url>
+          <line>38</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="masterDetails">
     <states>
@@ -628,7 +599,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>1.8 (OpenJDK)</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -640,7 +611,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Setup</last-edited>
+          <last-edited>BattleDucks</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

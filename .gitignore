@@ -1,2 +1,3 @@
-$GIT_DIR/Setup/.idea
-$GIT_DIR/SETUP/node_modules
+$GIT_DIR/.idea
+$GIT_DIR/node_modules
+$GIT_DIR/myapp/node_modules
