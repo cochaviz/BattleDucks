@@ -14,4 +14,4 @@ A multiplayer Battleship game using NodeJS with the Express framework.
 # Project structure
 Client side: `/myapp/public`
 
-Server side; `/myapp/*.js` && `myapp/routes`
+Server side: `/myapp/*.js` && `myapp/routes`
