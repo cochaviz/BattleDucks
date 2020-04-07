@@ -1,0 +1,36 @@
+{
+  "name": "myapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^2.6.1",
+    "express": "~4.16.0",
+    "express-session": "^1",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "pug": "^2.0.3",
+    "ws": "^6.2.1"
+  },
+  "author": "Zohar Cocavi & Mara Coman",
+  "description": "First year Computer Science and Engineering Web Technology project. A multiplayer Battleship game using NodeJS with the Express framework.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoharcochavi/BattleDucks.git"
+  },
+  "keywords": [
+    "ducks",
+    "battle",
+    "cute"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zoharcochavi/BattleDucks/issues"
+  },
+  "homepage": "https://github.com/zoharcochavi/BattleDucks#readme"
+}
