@@ -1,4 +1,5 @@
-var elem = document.documentElement;
+let elem = document.documentElement;
+let fullscreen = false;
 
 function openFullscreen() {
     if (elem.requestFullscreen) {
@@ -25,13 +26,18 @@ function openFullscreen() {
     }
   }
 
-  $(".openfullscreen").click(function() {
-     $(this).attr("class", "closefullscreen");
-     openFullscreen();
+  $(".fullscreen").click(function() {
+     if (!fullscreen) {
+         openFullscreen();
+         $("#openfullscreen").hide();
+         $("#closefullscreen").show();
+         fullscreen = true;
+     } else {
+         closeFullscreen();
+         $("#closefullscreen").hide();
+         $("#openfullscreen").show();
+         fullscreen = false;
+     }
   });
 
-  $(".closefullscreen").click(function(){
-     $(this).attr("class", "openfullscreen");
-     closeFullscreen();
-  });
 
