@@ -1,4 +1,5 @@
-var elem = document.documentElement;
+let elem = document.documentElement;
+let fullscreen = false;
 
 function openFullscreen() {
     if (elem.requestFullscreen) {
@@ -25,13 +26,28 @@ function openFullscreen() {
     }
   }
 
-  $(".openfullscreen").click(function() {
-     $(this).attr("class", "closefullscreen");
-     openFullscreen();
+  $(".fullscreen").click(function toggleFullscreen() {
+    if((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height)) {
+      closeFullscreen();
+      $("#closefullscreen").hide();
+      $("#openfullscreen").show();
+      fullscreen = false;
+    } else {
+      openFullscreen();
+      $("#openfullscreen").hide();
+      $("#closefullscreen").show();
+      fullscreen = true;
+    }   
   });
 
-  $(".closefullscreen").click(function(){
-     $(this).attr("class", "openfullscreen");
-     closeFullscreen();
-  });
+$(document).ready(function() {
+    if((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height)) {
+      $("#openfullscreen").hide();
+      $("#closefullscreen").show();
+    } else {
+      $("#closefullscreen").hide();
+      $("#openfullscreen").show();
+    }
+});
+
 
