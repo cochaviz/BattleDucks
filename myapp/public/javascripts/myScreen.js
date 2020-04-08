@@ -26,18 +26,28 @@ function openFullscreen() {
     }
   }
 
-  $(".fullscreen").click(function() {
-     if (!fullscreen) {
-         openFullscreen();
-         $("#openfullscreen").hide();
-         $("#closefullscreen").show();
-         fullscreen = true;
-     } else {
-         closeFullscreen();
-         $("#closefullscreen").hide();
-         $("#openfullscreen").show();
-         fullscreen = false;
-     }
+  $(".fullscreen").click(function toggleFullscreen() {
+    if((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height)) {
+      closeFullscreen();
+      $("#closefullscreen").hide();
+      $("#openfullscreen").show();
+      fullscreen = false;
+    } else {
+      openFullscreen();
+      $("#openfullscreen").hide();
+      $("#closefullscreen").show();
+      fullscreen = true;
+    }   
   });
+
+$(document).ready(function() {
+    if((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height)) {
+      $("#openfullscreen").hide();
+      $("#closefullscreen").show();
+    } else {
+      $("#closefullscreen").hide();
+      $("#openfullscreen").show();
+    }
+});
 
 
