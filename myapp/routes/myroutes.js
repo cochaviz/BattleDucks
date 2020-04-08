@@ -4,7 +4,7 @@ var router = express.Router();
 
 /* GET game page */
 router.get ('/game', function (req, res) {
-    res.sendFile("game.html", {root: "./public"});
+    res.sendFile("game.html", {root: "./myapp/public"});
 });
 
 module.exports = router;
