@@ -12,4 +12,4 @@ RUN cd /tmp/myapp && \
     mv * /var/www/app/
 
 # Run
-CMD cd /var/www/app/myapp && node app.js 3000
+CMD cd /var/www/app/myapp && node app.js $PORT
